@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
       {
           topic: 'networking',
           title: 'Networking',
-          description: 'Testează-ți cunoștințele despre rețele.',
-          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+          description: 'Test your knowledge about networking.',
+          imageUrl: 'https://cdn.pixabay.com/photo/2024/04/17/16/39/ai-generated-8702466_1280.jpg', // Replace with actual image URL
       },
       {
           topic: 'openstack',
           title: 'OpenStack',
-          description: 'Încearcă un quiz despre OpenStack.',
+          description: 'Test your knowledge about OpenStack.',
           imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
       },
       {
           topic: 'security',
           title: 'Security',
-          description: 'Verifică-ți cunoștințele de securitate.',
+          description: 'Test your knowledge about security.',
           imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
       },
   ];
