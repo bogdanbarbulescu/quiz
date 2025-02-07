@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
           topic: 'openstack',
           title: 'OpenStack',
           description: 'Test your knowledge about OpenStack.',
-          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobject-storage-ca-ymq-1.vexxhost.net%2Fswift%2Fv1%2F6e4619c416ff4bd19e1c087f27a43eea%2Fwww-images-prod%2Fopenstack-logo%2FOpenStack-Logo-Vertical-Black.png&f=1&nofb=1&ipt=21c68e05435750225060d98c32b8d10d47b226a17dd7883d7423565519254010&ipo=images', // Replace with actual image URL
+          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogs-images.forbes.com%2Fpatrickmoorhead%2Ffiles%2F2014%2F05%2Fopenstack-logo.jpg&f=1&nofb=1&ipt=c265d3a73f2169b8a55aae2a9771d3d0f02369a7103c716cdc323f21707c1ff3&ipo=images', // Replace with actual image URL
       },
       {
           topic: 'security',
