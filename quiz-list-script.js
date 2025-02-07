@@ -17,7 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         openstack: [
             { id: 'openstack-1', title: 'OpenStack Fundamentals', description: 'Covers core OpenStack concepts.' },
-            { id: 'openstack-2', title: 'Neutron Networking', description: 'Focuses on OpenStack networking.' },
+            { id: 'openstack-2', title: 'Nova - Compute', description: 'Covers core OpenStack concepts.' },
+            { id: 'openstack-3', title: 'Neutron - Networking', description: 'Focuses on OpenStack networking.' },
+            { id: 'openstack-4', title: 'Cinder - Block Storage', description: 'Focuses on OpenStack block storage.' },
+            { id: 'openstack-5', title: 'Swift - Object Storage', description: 'Focuses on OpenStack object storage.' },
+            { id: 'openstack-6', title: 'Keystone - Identity Service', description: 'Focuses on OpenStack identity service.' },
+            { id: 'openstack-7', title: 'Glance - Image Service', description: 'Focuses on OpenStack image service.' },
+            { id: 'openstack-8', title: 'Horizon - Dashboard', description: 'Focuses on OpenStack dashboard.' },
+            { id: 'openstack-8', title: 'Heat - Orchestration', description: 'Focuses on OpenStack orchestration.' },
         ],
         security: [
             { id: 'security-1', title: 'Basic Security Concepts', description: 'Test your knowledge of fundamental security principles.' },
