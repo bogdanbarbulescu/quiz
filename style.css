@@ -48,7 +48,7 @@ p {
   margin-bottom: 1rem;
   /* Space between image and text */
   border-radius: 8px;
-  /* Match card border radius */
+  /* Match card radius */
   overflow: hidden;
   /* Clip image to rounded corners */
 }
@@ -97,21 +97,87 @@ p {
   }
 }
 
-/* Styles for the quiz itself (quiz.html) */
-.quiz-card-inner {
-   background-color: #222; /* Dark background for the inner card */
-  color: #fff; /* Light text */
-}
-.question {
-  color: #fff;
-}
-.option {
-  color: #ccc;
-  margin-bottom: 0.5rem; /* Add space between radio options*/
+/* Styles for the quiz list (quiz-list.html) */
+.quiz-list-card {
+  background-color: #333; /* Slightly lighter than main cards */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
+.quiz-list-card:hover {
+  background-color: #444;
+  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5);
+}
+
+.quiz-list-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+.quiz-list-description {
+  color: #ccc;
+}
+
+.quiz-list-card:hover .quiz-list-title{
+color: #00b894;
+}
+
+/* Styles for the quiz itself (quiz.html) */
+/* IMPORTANT:  These styles now fully match the main card design */
+.quiz-card-inner {
+  background-color: #222; /* Dark background - MATCHES main card */
+  border: 1px solid #333; /* Subtle border - MATCHES main card */
+  border-radius: 8px; /* Rounded corners - MATCHES main card */
+  padding: 1.5rem; /* Padding - MATCHES main card */
+  color: #fff;
+  /*transition: background-color 0.2s ease, box-shadow 0.3s ease;  Removed to avoid double hover */
+}
+
+/*  Apply hover effect to the ENTIRE inner card */
+.quiz-card-inner:hover {
+ 
+  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5); /* Green glow */
+}
+
+
+.question {
+  color: #fff;
+  font-size: 1.1rem; /* Slightly larger font */
+  margin-bottom: 1rem; /* More space below the question */
+}
+
+.option {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  /* Add space between radio options */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center the radio button and label */
+}
+/* Style the radio button itself (optional, but improves appearance)*/
+.form-check-input {
+  margin-right: 0.5rem; /* Add space between radio and label */
+  appearance: none; /* Remove default styling */
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid #ccc;
+  border-radius: 50%; /* Make it circular */
+  outline: none; /* Remove focus outline */
+  transition: background-color 0.2s, border-color 0.2s; /* Smooth transitions */
+}
+/* Style the radio button when checked */
+.form-check-input:checked {
+  background-color: #00b894; /* Green background */
+  border-color: #00b894;   /* Green border */
+}
+
+
 .form-check-input:checked + .form-check-label {
-  color: #00b894; /* Highlight selected option */
+  color: #00b894;
+  /* Highlight selected option */
   font-weight: bold;
 }
 
@@ -121,16 +187,18 @@ p {
 
 /* Correct and incorrect answer color */
 .correct {
-  color: #28a745;  /* Green color for correct answers */
+  color: #28a745;
+  /* Green color for correct answers */
   font-weight: 700;
 }
 
 .incorrect {
-  color: #dc3545;  /* Red color for incorrect answers */
+  color: #dc3545;
+  /* Red color for incorrect answers */
   font-weight: 700;
 }
 
-  /* Congratulations Animation */
+/* Congratulations Animation */
 .congratulations {
   padding: 2rem;
   margin-top: 1rem;
@@ -147,4 +215,71 @@ p {
 .congratulations.animate-congratulations {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* Consistent button styling */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; /* Add box-shadow transition */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 5px rgba(108, 117, 125, 0.5); /* Subtle glow */
+}
+
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Subtle glow */
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Subtle glow */
+}
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529; /* Dark text for contrast */
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);   /* Subtle glow */
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+}
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+  box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);   /* Subtle glow */
 }
