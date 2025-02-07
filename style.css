@@ -1,0 +1,150 @@
+/* style.css (Existing File - Updated) */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.container {
+  max-width: 900px;
+}
+
+h1,
+p {
+  color: #fff;
+  /* Ensure text is light */
+}
+
+.quiz-card {
+  background-color: #222;
+  /* Darker card background */
+  border: 1px solid #333;
+  /* Subtle border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* Stack elements vertically */
+  align-items: center;
+  /* Center items horizontally */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  background-color: #333;
+  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5);
+  /* Green glow */
+}
+
+.quiz-image {
+  width: 150px;
+  /* Or whatever size you want */
+  height: 150px;
+  margin-bottom: 1rem;
+  /* Space between image and text */
+  border-radius: 8px;
+  /* Match card border radius */
+  overflow: hidden;
+  /* Clip image to rounded corners */
+}
+
+.quiz-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Cover the area, maintaining aspect ratio */
+}
+
+.quiz-content {
+  flex-grow: 1;
+  /* Allow content to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Vertically center text */
+}
+
+.quiz-content h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.quiz-card:hover .quiz-content h2 {
+  color: #00b894;
+  /* Green on hover */
+}
+
+.quiz-content p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  /* No specific changes needed here, Bootstrap's grid handles responsiveness */
+  .quiz-card {
+      margin-bottom: 1rem;
+      /* Add some margin between cards on smaller screens */
+  }
+}
+
+/* Styles for the quiz itself (quiz.html) */
+.quiz-card-inner {
+   background-color: #222; /* Dark background for the inner card */
+  color: #fff; /* Light text */
+}
+.question {
+  color: #fff;
+}
+.option {
+  color: #ccc;
+  margin-bottom: 0.5rem; /* Add space between radio options*/
+}
+
+.form-check-input:checked + .form-check-label {
+  color: #00b894; /* Highlight selected option */
+  font-weight: bold;
+}
+
+.progress-bar {
+  background-color: #00b894;
+}
+
+/* Correct and incorrect answer color */
+.correct {
+  color: #28a745;  /* Green color for correct answers */
+  font-weight: 700;
+}
+
+.incorrect {
+  color: #dc3545;  /* Red color for incorrect answers */
+  font-weight: 700;
+}
+
+  /* Congratulations Animation */
+.congratulations {
+  padding: 2rem;
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.congratulations.animate-congratulations {
+  opacity: 1;
+  transform: translateY(0);
+}
