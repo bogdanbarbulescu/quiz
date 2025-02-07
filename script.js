@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
           topic: 'openstack',
           title: 'OpenStack',
           description: 'Test your knowledge about OpenStack.',
-          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobject-storage-ca-ymq-1.vexxhost.net%2Fswift%2Fv1%2F6e4619c416ff4bd19e1c087f27a43eea%2Fwww-images-prod%2Fopenstack-logo%2FOpenStack-Logo-Vertical-Black.png&f=1&nofb=1&ipt=21c68e05435750225060d98c32b8d10d47b226a17dd7883d7423565519254010&ipo=images', // Replace with actual image URL
       },
       {
           topic: 'security',
           title: 'Security',
           description: 'Test your knowledge about security.',
-          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.theforage.com%2Fblog%2Fwp-content%2Fuploads%2F2022%2F12%2Fwhat-is-cybersecurity.jpg&f=1&nofb=1&ipt=d0c26caac6ebc96b5217464f284310120bc9c72bdb91a4ea9c001bb9b57f856d&ipo=images', // Replace with actual image URL
       },
   ];
 
