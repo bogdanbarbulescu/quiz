@@ -1,123 +1,66 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const quizData = [
-        { question: "What is the primary function of Neutron in OpenStack?", options: ["Compute resource management", "Identity and access management", "Networking as a Service (NaaS)", "Block storage management"], answer: "Networking as a Service (NaaS)" },
-        { question: "Which component serves as the main API endpoint for Neutron?", options: ["neutron-agent", "neutron-server", "neutron-l3-agent", "neutron-dhcp-agent"], answer: "neutron-server" },
-        { question: "Which technology is most commonly used for asynchronous communication between Neutron components?", options: ["HTTP/REST", "SOAP", "RabbitMQ (or another AMQP message queue)", "gRPC"], answer: "RabbitMQ (or another AMQP message queue)" },
-        { question: "What is the purpose of the ML2 plugin in Neutron?", options: ["To provide L3 routing services.", "To manage DHCP for virtual networks.", "To provide a modular framework for supporting various networking technologies.", "To collect network telemetry data."], answer: "To provide a modular framework for supporting various networking technologies." },
-        { question: "Which of the following is NOT a type of Neutron plugin?", options: ["Core Plugin", "Service Plugin", "Storage Plugin", "Mechanism Driver"], answer: "Storage Plugin" },
-        // Add more questions following the same structure
-    ];
+// script.js (Existing File - Updated) - in the main dashboard
 
-    let currentQuestion = 0;
-    let score = 0;
-    let incorrectAnswers = [];
-    let selectedAnswers = [];
+document.addEventListener('DOMContentLoaded', () => {
+  const quizContainer = document.getElementById('quiz-container');
 
-    const quizContainer = document.getElementById("quiz");
-    const progressBar = document.getElementById("progressBar");
-    const prevButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
-    const submitButton = document.getElementById("submit");
-    const retryButton = document.getElementById("retry");
-    const showAnswerButton = document.getElementById("showAnswer");
-    const resultContainer = document.getElementById("result");
+  const quizzes = [
+      {
+          topic: 'networking',
+          title: 'Networking',
+          description: 'Testează-ți cunoștințele despre rețele.',
+          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+      },
+      {
+          topic: 'openstack',
+          title: 'OpenStack',
+          description: 'Încearcă un quiz despre OpenStack.',
+          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+      },
+      {
+          topic: 'security',
+          title: 'Security',
+          description: 'Verifică-ți cunoștințele de securitate.',
+          imageUrl: 'https://loremflickr.com/320/240/brazil,rio', // Replace with actual image URL
+      },
+  ];
 
-    function updateProgress() {
-        const progress = ((currentQuestion + 1) / quizData.length) * 100;
-        progressBar.style.width = `${progress}%`;
-        progressBar.textContent = `${currentQuestion + 1}/${quizData.length}`;
-    }
+  function createQuizCard(quiz) {
+      const colDiv = document.createElement('div');
+      colDiv.classList.add('col-md-4');
 
-    function displayQuestion() {
-        const questionData = quizData[currentQuestion];
-        updateProgress();
-        
-        const optionsHtml = questionData.options.map((option, index) => 
-            `<div class="form-check option">
-                <input class="form-check-input" type="radio" name="quiz" id="option${index}" value="${option}" ${selectedAnswers[currentQuestion] === option ? "checked" : ""}>
-                <label class="form-check-label" for="option${index}">${option}</label>
-            </div>`
-        ).join("");
+      const cardDiv = document.createElement('div');
+      cardDiv.classList.add('quiz-card');
+      cardDiv.onclick = () => startQuiz(quiz.topic);
 
-        quizContainer.innerHTML = `
-            <h5 class="question mb-3">${questionData.question}</h5>
-            <div class="options">${optionsHtml}</div>
-        `;
-        
-        prevButton.disabled = currentQuestion === 0;
-        nextButton.classList.toggle("d-none", currentQuestion === quizData.length - 1);
-        submitButton.classList.toggle("d-none", currentQuestion !== quizData.length - 1);
-    }
+      const imageDiv = document.createElement('div');
+      imageDiv.classList.add('quiz-image');
+      const image = document.createElement('img');
+      image.src = quiz.imageUrl;
+      image.alt = quiz.title;
+      imageDiv.appendChild(image);
 
-    function checkAnswer() {
-        const selectedOption = document.querySelector('input[name="quiz"]:checked');
-        if (selectedOption) {
-            const answer = selectedOption.value;
-            selectedAnswers[currentQuestion] = answer;
-            const questionData = quizData[currentQuestion];
-            if (answer === questionData.answer) {
-                score++;
-            } else {
-                incorrectAnswers.push({
-                    question: questionData.question,
-                    incorrectAnswer: answer,
-                    correctAnswer: questionData.answer
-                });
-            }
-        }
-    }
+      const contentDiv = document.createElement('div');
+      contentDiv.classList.add('quiz-content');
+      const title = document.createElement('h2');
+      title.textContent = quiz.title;
+      const description = document.createElement('p');
+      description.textContent = quiz.description;
+      contentDiv.appendChild(title);
+      contentDiv.appendChild(description);
 
-    function showResults() {
-        quizContainer.innerHTML = "";
-        resultContainer.innerHTML = `<p>You scored <strong>${score}</strong> out of <strong>${quizData.length}</strong>.</p>`;
-        retryButton.classList.remove("d-none");
-        showAnswerButton.classList.remove("d-none");
-        nextButton.classList.add("d-none");
-        prevButton.classList.add("d-none");
-        submitButton.classList.add("d-none");
-    }
+      cardDiv.appendChild(imageDiv);
+      cardDiv.appendChild(contentDiv);
+      colDiv.appendChild(cardDiv);
 
-    function retryQuiz() {
-        currentQuestion = 0;
-        score = 0;
-        incorrectAnswers = [];
-        selectedAnswers = [];
-        retryButton.classList.add("d-none");
-        showAnswerButton.classList.add("d-none");
-        nextButton.classList.remove("d-none");
-        prevButton.classList.remove("d-none");
-        displayQuestion();
-    }
+      return colDiv;
+  }
 
-    function showAnswers() {
-        const answersHtml = incorrectAnswers.map(answer => 
-            `<div class="mb-3">
-                <p><strong>Question:</strong> ${answer.question}</p>
-                <p><span class="incorrect">Your Answer:</span> ${answer.incorrectAnswer}</p>
-                <p><span class="correct">Correct Answer:</span> ${answer.correctAnswer}</p>
-            </div>`
-        ).join("");
-        resultContainer.innerHTML = answersHtml;
-    }
 
-    prevButton.addEventListener("click", () => {
-        currentQuestion--;
-        displayQuestion();
-    });
+  quizzes.forEach(quiz => {
+      quizContainer.appendChild(createQuizCard(quiz));
+  });
 
-    nextButton.addEventListener("click", () => {
-        checkAnswer();
-        currentQuestion++;
-        displayQuestion();
-    });
-
-    submitButton.addEventListener("click", () => {
-        checkAnswer();
-        showResults();
-    });
-
-    retryButton.addEventListener("click", retryQuiz);
-    showAnswerButton.addEventListener("click", showAnswers);
-
-    displayQuestion();
+  function startQuiz(topic) {
+      window.location.href = `quiz.html?topic=${topic}`;
+  }
 });
