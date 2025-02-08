@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         openstack: [
             { id: 'openstack-1', title: 'OpenStack Fundamentals', description: 'Covers core OpenStack concepts.' },
-            { id: 'openstack-2', title: 'Nova - Compute', description: 'Covers core OpenStack concepts.' },
+            { id: 'openstack-2', title: 'Nova - Compute', description: 'Focuses on OpenStack compute.' },
             { id: 'openstack-3', title: 'Neutron - Networking', description: 'Focuses on OpenStack networking.' },
             { id: 'openstack-4', title: 'Cinder - Block Storage', description: 'Focuses on OpenStack block storage.' },
             { id: 'openstack-5', title: 'Swift - Object Storage', description: 'Focuses on OpenStack object storage.' },
