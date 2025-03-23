@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Challenge yourself with security quizzes.',
           imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.theforage.com%2Fblog%2Fwp-content%2Fuploads%2F2022%2F12%2Fwhat-is-cybersecurity.jpg&f=1&nofb=1&ipt=d0c26caac6ebc96b5217464f284310120bc9c72bdb91a4ea9c001bb9b57f856d&ipo=images', // Replace with actual image
       },
+      {
+          topic: 'aws',
+          title: 'AWS',
+          description: 'Test your knowledge on Amazon Web Services.',
+          imageUrl: 'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png', // Replace with a suitable AWS image URL
+      },
   ];
 
   function createCategoryCard(category) {
