@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'security-1', title: 'Basic Security Concepts', description: 'Test your knowledge of fundamental security principles.' },
             { id: 'security-2', title: 'Firewall Rules', description: 'Practice configuring firewall rules.' },
         ],
+        aws: [
+            { id: 'aws-storage-1', title: 'AWS Storage', description: 'Focuses on AWS storage services like S3, EBS, EFS, and Glacier.' },
+            { id: 'aws-compute-1', title: 'AWS Compute', description: 'Covers AWS compute services such as EC2, Lambda, and Elastic Beanstalk.' },
+            { id: 'aws-networking-1', title: 'AWS Networking', description: 'Questions related to VPC, Route 53, and Direct Connect.' },
+            { id: 'aws-databases-1', title: 'AWS Databases', description: 'Examines knowledge of RDS, DynamoDB, Redshift, and Aurora.' },
+            { id: 'aws-cloud-operations-1', title: 'AWS Cloud Operations', description: 'Focuses on services for monitoring, logging and managing the lifecycle.' },
+            { id: 'aws-security-1', title: 'AWS Security', description: 'Covers security services and features like IAM, and KMS.' },
+            { id: 'aws-serverless-1', title: 'AWS Serverless', description: 'Tests understanding of serverless technologies like Lambda and API Gateway.' },
+        ],
     };
 
     // Display the category title and description.
@@ -46,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'security':
                 categoryTitle.textContent = 'Security Quizzes';
                 categoryDescription.textContent = 'Select a security quiz.';
+                break;
+            case 'aws':
+                categoryTitle.textContent = 'AWS Quizzes';
+                categoryDescription.textContent = 'Select an AWS quiz to begin.';
                 break;
             default:
                 categoryTitle.textContent = 'Invalid Category';
