@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8E2BLMDT3L"></script>
@@ -23,11 +22,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-dark"> <!-- Flex column for footer -->
+<body class="d-flex flex-column min-vh-100 bg-dark">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"> <!-- Link back to index.html -->
+            <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-brain"></i> QuizMaster
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -36,8 +35,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="index.html#quiz-container">Quizzes</a></li> <!-- Active link -->
-                     <li class="nav-item"><a class="nav-link" href="flashcards.html">Flashcards</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html#quiz-container">Quizzes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flashcards.html">Flashcards</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
             </div>
@@ -45,17 +44,49 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container py-4 flex-grow-1"> <!-- flex-grow-1 to push footer down -->
-        <h1 id="categoryTitle" class="text-center mt-4 mb-2 text-light"></h1> <!-- Adjusted margin -->
-        <p id="categoryDescription" class="text-center text-light lead mb-4"></p> <!-- Added lead class -->
+    <div class="container py-4 flex-grow-1">
+        <h1 id="categoryTitle" class="text-center mt-4 mb-2 text-light">Category Quizzes</h1> <!-- Default title -->
+        <p id="categoryDescription" class="text-center text-light lead mb-4"></p>
 
-        <div id="quiz-list" class="mt-4">
-            <!-- Quiz list cards will be injected here dynamically by quiz-list-script.js -->
+        <!-- START: Search and Filter Controls Wrapper -->
+        <div class="controls-wrapper mb-4" style="display: none;">
+            <!-- Search Input -->
+            <div class="search-container mb-3">
+                <input type="search" id="quiz-search-input" class="form-control search-input" placeholder=" Search quizzes by title or description..." style="font-family: 'Font Awesome 6 Free', 'Segoe UI', sans-serif;">
+            </div>
+            <!-- Difficulty Filter Buttons -->
+            <div id="difficulty-filter" class="text-center difficulty-filter-buttons">
+                <div class="btn-group" role="group" aria-label="Difficulty Filter">
+                   <button type="button" class="btn btn-filter active" data-filter="all">All</button>
+                   <button type="button" class="btn btn-filter" data-filter="easy">Easy</button>
+                   <button type="button" class="btn btn-filter" data-filter="medium">Medium</button>
+                   <button type="button" class="btn btn-filter" data-filter="hard">Hard</button>
+                </div>
+           </div>
+        </div>
+        <!-- END: Search and Filter Controls Wrapper -->
+
+
+        <!-- Loading Indicator -->
+         <div id="loading-indicator" class="text-center mt-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Loading Quizzes...</p>
+         </div>
+         <!-- Error Message Area -->
+         <div id="error-message" class="alert alert-danger d-none mt-5" role="alert">
+             Could not load quizzes for this category. Please try again later or select a different category.
+         </div>
+         <!-- Quiz List Container -->
+        <div id="quiz-list" class="mt-4" style="display: none;"> <!-- Hide initially -->
+            <!-- Quiz list cards will be injected here dynamically -->
+            <p id="no-results-message" class="text-info text-center mt-4 d-none">No quizzes match the current filters.</p> <!-- Updated message -->
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="text-center py-4 mt-auto bg-dark text-light"> <!-- Use mt-auto -->
+    <footer class="text-center py-4 mt-auto bg-dark text-light">
         <p>© 2025 QuizMaster. All Rights Reserved.</p>
     </footer>
 
@@ -64,5 +95,4 @@
     <!-- Custom JS for Quiz List Page -->
     <script src="quiz-list-script.js"></script>
 </body>
-
 </html>

@@ -1,74 +1,107 @@
-// script.js (Updated for the main dashboard)
+// script.js (Dashboard - Fetches Category Data)
 
 document.addEventListener('DOMContentLoaded', () => {
-  const quizContainer = document.getElementById('quiz-container');
+    const quizContainer = document.getElementById('quiz-container');
+    const loadingIndicator = document.getElementById('loading-indicator');
+    const errorMessage = document.getElementById('error-message');
 
-  const categories = [
-      {
-          topic: 'networking',
-          title: 'Networking',
-          description: 'Explore various networking quizzes.',
-          imageUrl: 'https://cdn.pixabay.com/photo/2024/04/17/16/39/ai-generated-8702466_1280.jpg', // Replace with actual image
-      },
-      {
-          topic: 'openstack',
-          title: 'OpenStack',
-          description: 'Dive deep into OpenStack quizzes.',
-          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogs-images.forbes.com%2Fpatrickmoorhead%2Ffiles%2F2014%2F05%2Fopenstack-logo.jpg&f=1&nofb=1&ipt=c265d3a73f2169b8a55aae2a9771d3d0f02369a7103c716cdc323f21707c1ff3&ipo=images', // Replace with actual image
-      },
-      {
-          topic: 'security',
-          title: 'Security',
-          description: 'Challenge yourself with security quizzes.',
-          imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.theforage.com%2Fblog%2Fwp-content%2Fuploads%2F2022%2F12%2Fwhat-is-cybersecurity.jpg&f=1&nofb=1&ipt=d0c26caac6ebc96b5217464f284310120bc9c72bdb91a4ea9c001bb9b57f856d&ipo=images', // Replace with actual image
-      },
-      {
-          topic: 'aws',
-          title: 'AWS',
-          description: 'Test your knowledge on Amazon Web Services.',
-          imageUrl: 'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png', // Replace with a suitable AWS image URL
-      },
-  ];
+    // --- Fetch Category Data ---
+    async function loadCategories() {
+        try {
+            const response = await fetch('data/categories.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const categories = await response.json();
 
-  function createCategoryCard(category) {
-      const colDiv = document.createElement('div');
-      colDiv.classList.add('col-md-4');
+            // Hide loading indicator and show container
+            loadingIndicator.style.display = 'none';
+            quizContainer.style.display = 'flex'; // Use 'flex' because it's a Bootstrap row
 
-      const cardDiv = document.createElement('div');
-      cardDiv.classList.add('quiz-card');
-      // IMPORTANT:  Navigate to a category list page, NOT directly to a quiz.
-      cardDiv.onclick = () => showCategoryQuizzes(category.topic);
+            // Clear any previous cards (if applicable)
+            quizContainer.innerHTML = '';
 
-      const imageDiv = document.createElement('div');
-      imageDiv.classList.add('quiz-image');
-      const image = document.createElement('img');
-      image.src = category.imageUrl;
-      image.alt = category.title;
-      imageDiv.appendChild(image);
+            // Generate category cards
+            categories.forEach(category => {
+                quizContainer.appendChild(createCategoryCard(category));
+            });
 
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('quiz-content');
-      const title = document.createElement('h2');
-      title.textContent = category.title;
-      const description = document.createElement('p');
-      description.textContent = category.description;
-      contentDiv.appendChild(title);
-      contentDiv.appendChild(description);
+            // Add smooth scroll after categories are loaded
+            setupSmoothScroll();
 
-      cardDiv.appendChild(imageDiv);
-      cardDiv.appendChild(contentDiv);
-      colDiv.appendChild(cardDiv);
+        } catch (error) {
+            console.error("Error loading categories:", error);
+            loadingIndicator.style.display = 'none';
+            errorMessage.classList.remove('d-none'); // Show error message
+        }
+    }
 
-      return colDiv;
-  }
+    // --- Create Category Card ---
+    function createCategoryCard(category) {
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mb-4', 'd-flex'); // d-flex for equal height cards
 
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('quiz-card', 'w-100'); // w-100 ensures card fills col
+        cardDiv.onclick = () => showCategoryQuizzes(category.topic);
+        cardDiv.style.cursor = 'pointer'; // Add pointer cursor
 
-  categories.forEach(category => {
-      quizContainer.appendChild(createCategoryCard(category));
-  });
+        const imageDiv = document.createElement('div');
+        imageDiv.classList.add('quiz-image');
+        const image = document.createElement('img');
+        image.src = category.imageUrl;
+        image.alt = category.title;
+        image.loading = 'lazy';
+        imageDiv.appendChild(image);
 
-  // Function to navigate to the quiz list page for the selected category.
-  function showCategoryQuizzes(topic) {
-      window.location.href = `quiz-list.html?category=${topic}`;
-  }
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('quiz-content');
+
+        const textWrapper = document.createElement('div');
+        const title = document.createElement('h3'); // Use h3 for category title
+        title.textContent = category.title;
+        title.classList.add('h5'); // Style as h5 for size
+        const description = document.createElement('p');
+        description.textContent = category.description;
+        textWrapper.appendChild(title);
+        textWrapper.appendChild(description);
+
+        contentDiv.appendChild(textWrapper);
+
+        cardDiv.appendChild(imageDiv);
+        cardDiv.appendChild(contentDiv);
+        colDiv.appendChild(cardDiv);
+
+        return colDiv;
+    }
+
+    // --- Navigate to Quiz List ---
+    function showCategoryQuizzes(topic) {
+        window.location.href = `quiz-list.html?category=${topic}`;
+    }
+
+    // --- Smooth Scroll Setup ---
+    function setupSmoothScroll() {
+        const quizzesLink = document.querySelector('a[href="#quiz-container"]');
+        if (quizzesLink) {
+            quizzesLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.getElementById('quiz-container');
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navbarHeight - 20;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    }
+
+    // --- Initial Load ---
+    loadCategories();
+
 });

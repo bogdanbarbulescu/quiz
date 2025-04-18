@@ -1,0 +1,3712 @@
+{
+  "networking": [
+    {
+      "id": "networking-1",
+      "title": "CCNA Basics",
+      "description": "Test your basic CCNA knowledge.",
+      "difficulty": "easy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does OSI stand for?",
+          "options": [
+            "Open Systems Interconnection",
+            "Operating System Interface",
+            "Optical Signal Integration",
+            "Online System Interoperability"
+          ],
+          "answer": "Open Systems Interconnection"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which layer of the OSI model is responsible for routing?",
+          "options": [
+            "Physical Layer",
+            "Data Link Layer",
+            "Network Layer",
+            "Transport Layer"
+          ],
+          "answer": "Network Layer"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a MAC address?",
+          "options": [
+            "Identify a device on a network",
+            "Route data between networks",
+            "Encrypt data transmissions",
+            "Manage network congestion"
+          ],
+          "answer": "Identify a device on a network"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the default subnet mask for a Class C network?",
+          "options": [
+            "255.0.0.0",
+            "255.255.0.0",
+            "255.255.255.0",
+            "255.255.255.255"
+          ],
+          "answer": "255.255.255.0"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which protocol is used to resolve IP addresses to MAC addresses?",
+          "options": ["ARP", "DHCP", "DNS", "TCP"],
+          "answer": "ARP"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a router?",
+          "options": [
+            "Connect devices within the same network",
+            "Connect different networks together",
+            "Provide wireless access",
+            "Manage IP addresses"
+          ],
+          "answer": "Connect different networks together"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does TCP stand for?",
+          "options": [
+            "Transmission Control Protocol",
+            "Transfer Control Protocol",
+            "Transport Connection Protocol",
+            "Total Control Protocol"
+          ],
+          "answer": "Transmission Control Protocol"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a subnet mask used for?",
+          "options": [
+            "Identify the network and host portions of an IP address",
+            "Encrypt network traffic",
+            "Assign IP addresses dynamically",
+            "Connect to the internet"
+          ],
+          "answer": "Identify the network and host portions of an IP address"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is a valid IPv4 address?",
+          "options": [
+            "192.168.1.256",
+            "10.0.0.1",
+            "256.256.256.256",
+            "172.32.0.1/16"
+          ],
+          "answer": "10.0.0.1"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of DHCP?",
+          "options": [
+            "Assign IP addresses dynamically",
+            "Resolve domain names to IP addresses",
+            "Secure network communication",
+            "Manage network devices"
+          ],
+          "answer": "Assign IP addresses dynamically"
+        }
+      ]
+    },
+    {
+      "id": "networking-2",
+      "title": "Subnetting",
+      "description": "Practice subnetting questions.",
+      "difficulty": "hard",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "You have the network 192.168.1.0/24.  You need to create subnets with at least 25 hosts each.  What subnet mask should you use?",
+          "options": ["/25", "/26", "/27", "/28"],
+          "answer": "/27"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Given the IP address 172.16.0.0/16, how many subnets and hosts per subnet are possible with a /24 mask?",
+          "options": [
+            "256 subnets, 254 hosts",
+            "65,536 subnets, 256 hosts",
+            "256 subnets, 65,534 hosts",
+            "1 subnet, 16,777,214 hosts"
+          ],
+          "answer": "256 subnets, 254 hosts"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the network address of the host 192.168.1.55/27?",
+          "options": [
+            "192.168.1.0",
+            "192.168.1.32",
+            "192.168.1.48",
+            "192.168.1.64"
+          ],
+          "answer": "192.168.1.32"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the broadcast address for the network 10.0.0.64/26?",
+          "options": ["10.0.0.63", "10.0.0.127", "10.0.0.255", "10.0.0.128"],
+          "answer": "10.0.0.127"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How many usable host addresses are there in a /29 subnet?",
+          "options": ["8", "6", "14", "30"],
+          "answer": "6"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is a valid subnet mask?",
+          "options": [
+            "255.255.255.240",
+            "255.255.200.0",
+            "255.255.255.127",
+            "255.0.255.0"
+          ],
+          "answer": "255.255.255.240"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "The IP address 192.168.1.100/28 belongs to which subnet?",
+          "options": [
+            "192.168.1.0",
+            "192.168.1.96",
+            "192.168.1.64",
+            "192.168.1.112"
+          ],
+          "answer": "192.168.1.96"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the first usable host address in the subnet 172.16.5.64/26?",
+          "options": [
+            "172.16.5.64",
+            "172.16.5.65",
+            "172.16.5.127",
+            "172.16.5.126"
+          ],
+          "answer": "172.16.5.65"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the last usable host address in the subnet 10.1.1.0/24?",
+          "options": ["10.1.1.0", "10.1.1.1", "10.1.1.254", "10.1.1.255"],
+          "answer": "10.1.1.254"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "You are given the network 10.0.0.0/8 and need 1000 subnets. What subnet mask will provide the required number of subnets, while maximizing the number of host addresses per subnet?",
+          "options": ["/18", "/19", "/20", "/21"],
+          "answer": "/18"
+        }
+      ]
+    }
+  ],
+  "openstack": [
+    {
+      "id": "openstack-1",
+      "title": "OpenStack Fundamentals",
+      "description": "Covers core OpenStack concepts.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of Neutron in OpenStack?",
+          "options": [
+            "Compute resource management",
+            "Identity and access management",
+            "Networking as a Service (NaaS)",
+            "Block storage management"
+          ],
+          "answer": "Networking as a Service (NaaS)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which component serves as the main API endpoint for Neutron?",
+          "options": [
+            "neutron-agent",
+            "neutron-server",
+            "neutron-l3-agent",
+            "neutron-dhcp-agent"
+          ],
+          "answer": "neutron-server"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which technology is most commonly used for asynchronous communication between OpenStack components?",
+          "options": [
+            "HTTP/REST",
+            "SOAP",
+            "RabbitMQ (or another AMQP message queue)",
+            "gRPC"
+          ],
+          "answer": "RabbitMQ (or another AMQP message queue)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the ML2 plugin in Neutron?",
+          "options": [
+            "To provide L3 routing services.",
+            "To manage DHCP for virtual networks.",
+            "To provide a modular framework for supporting various networking technologies.",
+            "To collect network telemetry data."
+          ],
+          "answer": "To provide a modular framework for supporting various networking technologies."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is NOT a type of Neutron plugin?",
+          "options": [
+            "Core Plugin",
+            "Service Plugin",
+            "Storage Plugin",
+            "Mechanism Driver"
+          ],
+          "answer": "Storage Plugin"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does Cinder provide in OpenStack?",
+          "options": [
+            "Networking services",
+            "Identity services",
+            "Block storage services",
+            "Object storage services"
+          ],
+          "answer": "Block storage services"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which OpenStack component is responsible for user authentication and authorization?",
+          "options": ["Nova", "Keystone", "Glance", "Swift"],
+          "answer": "Keystone"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of Glance in OpenStack?",
+          "options": [
+            "Compute resource management",
+            "Image service",
+            "Networking service",
+            "Object storage service"
+          ],
+          "answer": "Image service"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What type of storage does Swift provide in OpenStack?",
+          "options": [
+            "Block storage",
+            "File storage",
+            "Object storage",
+            "Ephemeral storage"
+          ],
+          "answer": "Object storage"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which component is the core of OpenStack's compute service?",
+          "options": ["Neutron", "Cinder", "Nova", "Swift"],
+          "answer": "Nova"
+        }
+      ]
+    },
+    {
+      "id": "openstack-2",
+      "title": "Nova - Compute",
+      "description": "Focuses on OpenStack compute.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Nova?",
+          "options": [
+            "Networking",
+            "Block Storage",
+            "Compute (virtual machine management)",
+            "Object Storage"
+          ],
+          "answer": "Compute (virtual machine management)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which component of Nova is responsible for scheduling virtual machine instances?",
+          "options": [
+            "nova-api",
+            "nova-compute",
+            "nova-scheduler",
+            "nova-conductor"
+          ],
+          "answer": "nova-scheduler"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'flavor' in OpenStack Nova?",
+          "options": [
+            "A type of network.",
+            "A pre-defined set of virtual hardware resources (CPU, RAM, disk).",
+            "A user account.",
+            "An image used to create instances."
+          ],
+          "answer": "A pre-defined set of virtual hardware resources (CPU, RAM, disk)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command-line tool is commonly used to interact with Nova?",
+          "options": ["nova", "cinder", "neutron", "glance"],
+          "answer": "nova"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'instance' in OpenStack Nova?",
+          "options": [
+            "A physical server.",
+            "A running virtual machine.",
+            "A network configuration.",
+            "A storage volume."
+          ],
+          "answer": "A running virtual machine."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of `nova-compute`?",
+          "options": [
+            "Provides the API endpoint for Nova.",
+            "Schedules instance creation.",
+            "Manages the lifecycle of instances on a specific hypervisor.",
+            "Provides a database for Nova."
+          ],
+          "answer": "Manages the lifecycle of instances on a specific hypervisor."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which hypervisors are commonly supported by OpenStack Nova?",
+          "options": ["KVM", "Xen", "VMware vSphere", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a key pair in Nova?",
+          "options": [
+            "To encrypt network traffic.",
+            "To provide secure SSH access to instances.",
+            "To manage user accounts.",
+            "To define firewall rules."
+          ],
+          "answer": "To provide secure SSH access to instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'security group' in the context of Nova?",
+          "options": [
+            "A group of users.",
+            "A set of firewall rules that control network access to instances.",
+            "A type of virtual network.",
+            "A method for encrypting data."
+          ],
+          "answer": "A set of firewall rules that control network access to instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the difference between an ephemeral disk and a persistent volume?",
+          "options": [
+            "Ephemeral disks are faster.",
+            "Ephemeral disks are tied to the instance lifecycle; persistent volumes are not.",
+            "Ephemeral disks are larger.",
+            "Ephemeral disks are stored on object storage."
+          ],
+          "answer": "Ephemeral disks are tied to the instance lifecycle; persistent volumes are not."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Nova component provides a database abstraction layer?",
+          "options": [
+            "nova-api",
+            "nova-compute",
+            "nova-scheduler",
+            "nova-conductor"
+          ],
+          "answer": "nova-conductor"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'live migration' in Nova?",
+          "options": [
+            "Moving a running instance from one compute host to another without significant downtime.",
+            "Creating a backup of an instance.",
+            "Resizing an instance.",
+            "Changing the flavor of an instance."
+          ],
+          "answer": "Moving a running instance from one compute host to another without significant downtime."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'server group' in Nova?",
+          "options": [
+            "A group of users with access to the same servers.",
+            "A group of instances with specific placement policies (e.g., affinity or anti-affinity).",
+            "A group of networks.",
+            "A group of storage volumes."
+          ],
+          "answer": "A group of instances with specific placement policies (e.g., affinity or anti-affinity)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `nova-api` service?",
+          "options": [
+            "To manage the lifecycle of instances.",
+            "To provide the REST API endpoint for Nova.",
+            "To schedule instances.",
+            "To interact with the hypervisor."
+          ],
+          "answer": "To provide the REST API endpoint for Nova."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which database does Nova commonly use?",
+          "options": ["SQLite", "MongoDB", "MySQL (or PostgreSQL)", "Redis"],
+          "answer": "MySQL (or PostgreSQL)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'availability zone' in OpenStack?",
+          "options": [
+            "A logically isolated section of the cloud, often corresponding to a physical data center or rack.",
+            "A type of network.",
+            "A type of storage.",
+            "A group of users."
+          ],
+          "answer": "A logically isolated section of the cloud, often corresponding to a physical data center or rack."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'host aggregate' in Nova?",
+          "options": [
+            "A group of compute hosts with shared characteristics (e.g., specific hardware or location).",
+            "A group of instances.",
+            "A group of networks.",
+            "A group of users."
+          ],
+          "answer": "A group of compute hosts with shared characteristics (e.g., specific hardware or location)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `nova-network` service (deprecated in later OpenStack releases)?",
+          "options": [
+            "To provide advanced networking features.",
+            "To manage virtual machine instances.",
+            "To provide basic networking for instances.",
+            "To manage block storage."
+          ],
+          "answer": "To provide basic networking for instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of a hypervisor in OpenStack?",
+          "options": [
+            "To manage user accounts",
+            "To provide networking services",
+            "To run and manage virtual machines",
+            "To provide block storage"
+          ],
+          "answer": "To run and manage virtual machines"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does 'overcommit' mean in the context of Nova?",
+          "options": [
+            "Allocating more virtual resources (CPU, RAM) than are physically available.",
+            "Creating too many instances.",
+            "Using too much network bandwidth.",
+            "Storing too much data."
+          ],
+          "answer": "Allocating more virtual resources (CPU, RAM) than are physically available."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'rescue' operation in Nova?",
+          "options": [
+            "Starting an instance in a safe mode to troubleshoot problems.",
+            "Deleting an instance.",
+            "Creating a backup of an instance.",
+            "Migrating an instance."
+          ],
+          "answer": "Starting an instance in a safe mode to troubleshoot problems."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'shelved' instance?",
+          "options": [
+            "An instance that has been paused.",
+            "An instance that has been stopped and its resources released, but its data is preserved.",
+            "An instance that has been deleted.",
+            "An instance that is being migrated."
+          ],
+          "answer": "An instance that has been stopped and its resources released, but its data is preserved."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list running instances in Nova?",
+          "options": ["nova list", "nova show", "nova create", "nova delete"],
+          "answer": "nova list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a new instance in Nova?",
+          "options": ["nova list", "nova show", "nova create", "nova delete"],
+          "answer": "nova create"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file is used to configure the Nova service?",
+          "options": [
+            "/etc/nova/nova.conf",
+            "/etc/keystone/keystone.conf",
+            "/etc/glance/glance-api.conf",
+            "/etc/cinder/cinder.conf"
+          ],
+          "answer": "/etc/nova/nova.conf"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a 'config drive' in Nova?",
+          "options": [
+            "To provide a fast storage option.",
+            "To store the instance's operating system.",
+            "To provide a way to pass configuration data (e.g., user data, metadata) to an instance at boot time.",
+            "To encrypt instance data."
+          ],
+          "answer": "To provide a way to pass configuration data (e.g., user data, metadata) to an instance at boot time."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'cold migration' (also known as 'resize' or 'migrate')?",
+          "options": [
+            "Moving a *running* instance.",
+            "Moving a *stopped* instance to a different compute host, potentially changing its resources.",
+            "Backing up an instance.",
+            "Deleting an instance."
+          ],
+          "answer": "Moving a *stopped* instance to a different compute host, potentially changing its resources."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What information does `nova show <instance_id>` provide?",
+          "options": [
+            "Detailed information about a specific instance, including its status, flavor, IP addresses, etc.",
+            "A list of all instances.",
+            "Information about a specific flavor.",
+            "Information about a specific key pair."
+          ],
+          "answer": "Detailed information about a specific instance, including its status, flavor, IP addresses, etc."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of `nova-consoleauth`?",
+          "options": [
+            "To authenticate users for the Nova API",
+            "To provide console access to instances (VNC, SPICE, etc.)",
+            "To schedule instances",
+            "To manage network connections"
+          ],
+          "answer": "To provide console access to instances (VNC, SPICE, etc.)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is NOT a valid instance state in Nova?",
+          "options": ["ACTIVE", "BUILDING", "SHUTOFF", "RUNNING"],
+          "answer": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "openstack-3",
+      "title": "Neutron - Networking",
+      "description": "Focuses on OpenStack networking.",
+      "difficulty": "hard",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is a Neutron provider network?",
+          "options": [
+            "A network created by an administrator that maps directly to a physical network.",
+            "A network created by a tenant user.",
+            "A network that provides self-service IPAM.",
+            "A network isolated using VLANs."
+          ],
+          "answer": "A network created by an administrator that maps directly to a physical network."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Neutron component is responsible for providing L3 routing services?",
+          "options": [
+            "neutron-server",
+            "neutron-dhcp-agent",
+            "neutron-l3-agent",
+            "neutron-metadata-agent"
+          ],
+          "answer": "neutron-l3-agent"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the function of a Neutron router?",
+          "options": [
+            "To connect different tenant networks together.",
+            "To provide DHCP services.",
+            "To manage security groups.",
+            "To provide metadata to instances."
+          ],
+          "answer": "To connect different tenant networks together."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a security group in Neutron?",
+          "options": [
+            "A collection of firewall rules that control network traffic to instances.",
+            "A group of users with specific access privileges.",
+            "A group of networks connected together.",
+            "A mechanism for encrypting network traffic."
+          ],
+          "answer": "A collection of firewall rules that control network traffic to instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is a valid Neutron network type?",
+          "options": ["Local", "Flat", "VLAN", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a floating IP address in Neutron?",
+          "options": [
+            "To provide a static IP address to an instance.",
+            "To provide a publicly accessible IP address to an instance.",
+            "To provide a temporary IP address to an instance.",
+            "To provide an IP address for internal communication between instances."
+          ],
+          "answer": "To provide a publicly accessible IP address to an instance."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command is used to create a Neutron network?",
+          "options": [
+            "neutron net-create",
+            "nova net-create",
+            "cinder net-create",
+            "glance net-create"
+          ],
+          "answer": "neutron net-create"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of the neutron-dhcp-agent?",
+          "options": [
+            "To provide L3 routing.",
+            "To manage security groups.",
+            "To provide DHCP services to tenant networks.",
+            "To provide metadata to instances."
+          ],
+          "answer": "To provide DHCP services to tenant networks."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is NOT a typical component of a Neutron deployment?",
+          "options": [
+            "neutron-server",
+            "neutron-l3-agent",
+            "neutron-dhcp-agent",
+            "neutron-storage-agent"
+          ],
+          "answer": "neutron-storage-agent"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the Metadata Agent in Neutron?",
+          "options": [
+            "Provides configuration information (like hostname, ssh keys) to instances.",
+            "Manages persistent storage volumes.",
+            "Assigns floating IP addresses.",
+            "Handles DNS resolution."
+          ],
+          "answer": "Provides configuration information (like hostname, ssh keys) to instances."
+        }
+      ]
+    },
+    {
+      "id": "openstack-4",
+      "title": "Cinder - Block Storage",
+      "description": "Focuses on OpenStack block storage.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Cinder?",
+          "options": [
+            "Networking",
+            "Compute",
+            "Block Storage (providing persistent volumes)",
+            "Object Storage"
+          ],
+          "answer": "Block Storage (providing persistent volumes)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which component of Cinder is responsible for managing volume operations on storage backends?",
+          "options": [
+            "cinder-api",
+            "cinder-volume",
+            "cinder-scheduler",
+            "cinder-backup"
+          ],
+          "answer": "cinder-volume"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'volume' in OpenStack Cinder?",
+          "options": [
+            "A virtual machine instance.",
+            "A network configuration.",
+            "A detachable block storage device that can be attached to instances.",
+            "A user account."
+          ],
+          "answer": "A detachable block storage device that can be attached to instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command-line tool is commonly used to interact with Cinder?",
+          "options": ["nova", "cinder", "neutron", "glance"],
+          "answer": "cinder"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'snapshot' in Cinder?",
+          "options": [
+            "A running virtual machine.",
+            "A point-in-time copy of a volume.",
+            "A network configuration.",
+            "A user account."
+          ],
+          "answer": "A point-in-time copy of a volume."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of `cinder-api`?",
+          "options": [
+            "Manages volume operations.",
+            "Provides the REST API endpoint for Cinder.",
+            "Schedules volume creation.",
+            "Creates backups of volumes."
+          ],
+          "answer": "Provides the REST API endpoint for Cinder."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which storage backends are commonly supported by OpenStack Cinder?",
+          "options": ["LVM", "NFS", "Ceph", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a 'volume type' in Cinder?",
+          "options": [
+            "To define the size of a volume.",
+            "To define the performance characteristics and features of a volume (e.g., SSD vs. HDD, encryption).",
+            "To define the availability zone of a volume.",
+            "To define the user who owns a volume."
+          ],
+          "answer": "To define the performance characteristics and features of a volume (e.g., SSD vs. HDD, encryption)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the difference between a Cinder volume and a Glance image?",
+          "options": [
+            "A volume is a running instance; an image is a template.",
+            "A volume is a persistent block storage device; an image is a template file used to create instances or volumes.",
+            "A volume is larger than an image.",
+            "Volumes are encrypted; images are not."
+          ],
+          "answer": "A volume is a persistent block storage device; an image is a template file used to create instances or volumes."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can a Cinder volume be attached to multiple instances simultaneously?",
+          "options": [
+            "Yes, always.",
+            "No, only to one instance at a time (by default, multi-attach is possible but less common).",
+            "Yes, but only if they are in the same availability zone.",
+            "Yes, but only if they use the same volume type."
+          ],
+          "answer": "No, only to one instance at a time (by default, multi-attach is possible but less common)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Cinder component is responsible for choosing the appropriate storage backend for a volume?",
+          "options": [
+            "cinder-api",
+            "cinder-volume",
+            "cinder-scheduler",
+            "cinder-backup"
+          ],
+          "answer": "cinder-scheduler"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'volume migration' in Cinder?",
+          "options": [
+            "Moving a volume from one compute host to another.",
+            "Moving a volume from one storage backend to another.",
+            "Creating a backup of a volume.",
+            "Deleting a volume."
+          ],
+          "answer": "Moving a volume from one storage backend to another."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'volume group' in Cinder?",
+          "options": [
+            "A group of users with access to the same volumes.",
+            "A group of volumes that can be managed as a single unit (e.g., for consistent snapshots).",
+            "A group of instances.",
+            "A group of networks."
+          ],
+          "answer": "A group of volumes that can be managed as a single unit (e.g., for consistent snapshots)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `cinder-backup` service?",
+          "options": [
+            "To manage volume operations.",
+            "To provide the REST API endpoint for Cinder.",
+            "To schedule volume creation.",
+            "To create and manage backups of volumes, often to a different backend like Swift."
+          ],
+          "answer": "To create and manage backups of volumes, often to a different backend like Swift."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which database does Cinder commonly use?",
+          "options": ["SQLite", "MongoDB", "MySQL (or PostgreSQL)", "Redis"],
+          "answer": "MySQL (or PostgreSQL)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'availability zone' in the context of Cinder?",
+          "options": [
+            "A logically isolated section of the cloud, often corresponding to a physical data center or rack, affecting where volumes can be created and attached.",
+            "A type of network.",
+            "A type of instance.",
+            "A group of users."
+          ],
+          "answer": "A logically isolated section of the cloud, often corresponding to a physical data center or rack, affecting where volumes can be created and attached."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'QoS' (Quality of Service) in the context of Cinder?",
+          "options": [
+            "A way to define performance limits and guarantees for volumes (e.g., IOPS, throughput).",
+            "A way to define the size of a volume.",
+            "A way to define the availability zone of a volume.",
+            "A way to define the user who owns a volume."
+          ],
+          "answer": "A way to define performance limits and guarantees for volumes (e.g., IOPS, throughput)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of a storage backend driver in OpenStack Cinder?",
+          "options": [
+            "To provide the Cinder API.",
+            "To manage Glance images.",
+            "To interface with a specific storage hardware or software (e.g., LVM, Ceph, NFS).",
+            "To manage Neutron networks."
+          ],
+          "answer": "To interface with a specific storage hardware or software (e.g., LVM, Ceph, NFS)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list volumes in Cinder?",
+          "options": [
+            "cinder list",
+            "cinder show",
+            "cinder create",
+            "cinder delete"
+          ],
+          "answer": "cinder list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a new volume in Cinder?",
+          "options": [
+            "cinder list",
+            "cinder show",
+            "cinder create",
+            "cinder delete"
+          ],
+          "answer": "cinder create"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file is used to configure the Cinder service?",
+          "options": [
+            "/etc/nova/nova.conf",
+            "/etc/keystone/keystone.conf",
+            "/etc/glance/glance-api.conf",
+            "/etc/cinder/cinder.conf"
+          ],
+          "answer": "/etc/cinder/cinder.conf"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of 'volume retyping' in Cinder?",
+          "options": [
+            "To change the size of a volume.",
+            "To change the availability zone of a volume.",
+            "To change the volume type of a volume (e.g., from HDD to SSD), potentially involving migration.",
+            "To change the name of a volume."
+          ],
+          "answer": "To change the volume type of a volume (e.g., from HDD to SSD), potentially involving migration."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a snapshot of a volume?",
+          "options": [
+            "cinder snapshot-create",
+            "cinder create-snapshot",
+            "cinder volume-snapshot",
+            "cinder snapshot-list"
+          ],
+          "answer": "cinder snapshot-create"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you create a volume from a snapshot?",
+          "options": [
+            "Yes",
+            "No",
+            "Only if the snapshot is encrypted",
+            "Only if the snapshot is of a specific type"
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'volume cloning' in Cinder?",
+          "options": [
+            "Creating an independent copy of an existing volume.",
+            "Deleting a volume.",
+            "Attaching a volume to an instance.",
+            "Creating a snapshot of a volume."
+          ],
+          "answer": "Creating an independent copy of an existing volume."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to attach a volume to an instance (using the OpenStack unified client)?",
+          "options": [
+            "cinder attach",
+            "nova server add volume",
+            "openstack server add volume",
+            "nova volume-attach"
+          ],
+          "answer": "openstack server add volume"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to detach a volume from an instance (using the OpenStack unified client)?",
+          "options": [
+            "cinder detach",
+            "nova server remove volume",
+            "openstack server remove volume",
+            "nova volume-detach"
+          ],
+          "answer": "openstack server remove volume"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What information does `cinder show <volume_id>` provide?",
+          "options": [
+            "Detailed information about a specific volume (status, size, type, attachments, etc.).",
+            "A list of all volumes.",
+            "A list of available volume types.",
+            "A list of volume backups."
+          ],
+          "answer": "Detailed information about a specific volume (status, size, type, attachments, etc.)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is a valid Cinder volume status?",
+          "options": ["available", "in-use", "error", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the difference between `cinder-backup` and a volume snapshot?",
+          "options": [
+            "Snapshots are faster.",
+            "Backups can be stored in a different storage backend (e.g., object storage) for disaster recovery; snapshots are typically stored on the same backend as the volume.",
+            "`cinder-backup` is deprecated.",
+            "There is no difference."
+          ],
+          "answer": "Backups can be stored in a different storage backend (e.g., object storage) for disaster recovery; snapshots are typically stored on the same backend as the volume."
+        }
+      ]
+    },
+    {
+      "id": "openstack-5",
+      "title": "Swift - Object Storage",
+      "description": "Focuses on OpenStack object storage.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Swift?",
+          "options": [
+            "Block Storage",
+            "Compute",
+            "Networking",
+            "Object Storage (storing and retrieving unstructured data)"
+          ],
+          "answer": "Object Storage (storing and retrieving unstructured data)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'container' in OpenStack Swift?",
+          "options": [
+            "A virtual machine.",
+            "A network configuration.",
+            "A storage compartment for objects, similar to a folder or directory.",
+            "A user account."
+          ],
+          "answer": "A storage compartment for objects, similar to a folder or directory."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'object' in OpenStack Swift?",
+          "options": [
+            "A running virtual machine.",
+            "A network configuration.",
+            "A piece of data (e.g., a file) stored in Swift.",
+            "A user account."
+          ],
+          "answer": "A piece of data (e.g., a file) stored in Swift."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command-line tool is commonly used to interact with Swift?",
+          "options": ["swift", "cinder", "nova", "glance"],
+          "answer": "swift"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is Swift suitable for storing operating system boot images for Glance?",
+          "options": [
+            "Yes, it's a common backend for Glance.",
+            "No, it's designed only for user data.",
+            "Only if the images are small.",
+            "Only if the images are compressed."
+          ],
+          "answer": "Yes, it's a common backend for Glance."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How is data redundancy typically achieved in OpenStack Swift?",
+          "options": [
+            "By using RAID on the storage nodes.",
+            "By replicating objects across multiple storage nodes, zones, and regions.",
+            "By creating backups using Cinder.",
+            "By using snapshots."
+          ],
+          "answer": "By replicating objects across multiple storage nodes, zones, and regions."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'account' level in the Swift hierarchy?",
+          "options": [
+            "The top-level namespace, typically representing a user or tenant.",
+            "A container for objects.",
+            "An individual object.",
+            "A virtual machine instance."
+          ],
+          "answer": "The top-level namespace, typically representing a user or tenant."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What are the four main types of Swift server processes?",
+          "options": [
+            "Proxy Server, Account Server, Container Server, Object Server",
+            "API Server, Scheduler, Compute Node, Conductor",
+            "Neutron Server, Cinder Volume, Glance Image, Nova Compute",
+            "Keystone Server, Horizon Dashboard, Swift Client, Storage Node"
+          ],
+          "answer": "Proxy Server, Account Server, Container Server, Object Server"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of the Swift Proxy Server?",
+          "options": [
+            "To directly store object data.",
+            "To manage user authentication (delegated to Keystone).",
+            "To handle incoming API requests, locate data using the rings, and route requests.",
+            "To perform data replication."
+          ],
+          "answer": "To handle incoming API requests, locate data using the rings, and route requests."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is eventual consistency in the context of Swift?",
+          "options": [
+            "Data is immediately consistent across all replicas.",
+            "Data updates may take some time to propagate to all replicas, but they will eventually become consistent.",
+            "Data consistency is not guaranteed.",
+            "Data is only consistent within a single availability zone."
+          ],
+          "answer": "Data updates may take some time to propagate to all replicas, but they will eventually become consistent."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which HTTP methods are commonly used with the Swift API?",
+          "options": [
+            "GET, PUT, POST, DELETE, HEAD, COPY",
+            "SELECT, INSERT, UPDATE, DELETE",
+            "CREATE, READ, UPDATE, DELETE",
+            "CONNECT, DISCONNECT, SEND, RECEIVE"
+          ],
+          "answer": "GET, PUT, POST, DELETE, HEAD, COPY"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'large object support' (SLO/DLO) in Swift?",
+          "options": [
+            "The ability to store very large files by splitting them into smaller segments managed by a manifest file.",
+            "The ability to store a large number of small files efficiently.",
+            "The ability to automatically encrypt large objects.",
+            "The ability to store objects larger than the underlying filesystem limit."
+          ],
+          "answer": "The ability to store very large files by splitting them into smaller segments managed by a manifest file."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'pseudo-hierarchical folder' in Swift?",
+          "options": [
+            "A real folder structure on the storage nodes.",
+            "A convention using object names with delimiters (like '/') to simulate folders within a flat container structure.",
+            "A folder that is only visible to administrators.",
+            "A container specifically designed for nested structures."
+          ],
+          "answer": "A convention using object names with delimiters (like '/') to simulate folders within a flat container structure."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'static web hosting' in Swift?",
+          "options": [
+            "The ability to host dynamic websites using Swift.",
+            "The ability to configure a container to serve static website content (HTML, CSS, JS, images) directly via HTTP.",
+            "Running web server processes on Swift storage nodes.",
+            "A feature for hosting virtual machines dedicated to web serving."
+          ],
+          "answer": "The ability to configure a container to serve static website content (HTML, CSS, JS, images) directly via HTTP."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'TempURL' in Swift?",
+          "options": [
+            "A temporary password for Swift access.",
+            "A time-limited, HMAC-signed URL that grants temporary access (e.g., GET or PUT) to a specific object without needing Swift credentials.",
+            "A temporary storage location for uploads.",
+            "A temporary network endpoint."
+          ],
+          "answer": "A time-limited, HMAC-signed URL that grants temporary access (e.g., GET or PUT) to a specific object without needing Swift credentials."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you store metadata with objects and containers in Swift?",
+          "options": [
+            "Yes, arbitrary key-value pairs can be stored as metadata.",
+            "No, metadata is not supported.",
+            "Only system-defined metadata is allowed.",
+            "Metadata is only stored at the account level."
+          ],
+          "answer": "Yes, arbitrary key-value pairs can be stored as metadata."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'versioning' in Swift?",
+          "options": [
+            "Tracking changes to Swift's source code.",
+            "Configuring a container to automatically keep previous versions of objects when they are overwritten or deleted.",
+            "Using different versions of the Swift API.",
+            "Managing user account versions."
+          ],
+          "answer": "Configuring a container to automatically keep previous versions of objects when they are overwritten or deleted."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'bulk delete' in Swift?",
+          "options": [
+            "Deleting a single large object.",
+            "An API operation allowing the deletion of multiple objects (up to 10,000) in a single request.",
+            "Deleting an entire container and its contents recursively.",
+            "Deleting an entire account."
+          ],
+          "answer": "An API operation allowing the deletion of multiple objects (up to 10,000) in a single request."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list containers in Swift?",
+          "options": [
+            "swift list",
+            "swift show",
+            "swift upload",
+            "swift download"
+          ],
+          "answer": "swift list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to upload a file 'myfile.txt' to a container named 'mycontainer'?",
+          "options": [
+            "swift list mycontainer",
+            "swift show mycontainer myfile.txt",
+            "swift upload mycontainer myfile.txt",
+            "swift download mycontainer myfile.txt"
+          ],
+          "answer": "swift upload mycontainer myfile.txt"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file typically contains the main configuration for the Swift Proxy server?",
+          "options": [
+            "/etc/swift/proxy-server.conf",
+            "/etc/swift/swift.conf",
+            "/etc/swift/object-server.conf",
+            "/etc/swift/dispersion.conf"
+          ],
+          "answer": "/etc/swift/proxy-server.conf"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'ring' (.ring.gz file) in Swift?",
+          "options": [
+            "A data structure mapping partitions of the account/container/object namespace to physical storage devices.",
+            "A security group configuration.",
+            "A network topology map.",
+            "A type of load balancer."
+          ],
+          "answer": "A data structure mapping partitions of the account/container/object namespace to physical storage devices."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does CORS (Cross-Origin Resource Sharing) support in Swift allow?",
+          "options": [
+            "Web applications served from one domain to make requests for resources in a Swift container served from another domain.",
+            "Encrypting data transferred between different origins.",
+            "Compressing data before sending it across origins.",
+            "Migrating data between different Swift clusters."
+          ],
+          "answer": "Web applications served from one domain to make requests for resources in a Swift container served from another domain."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to download an object named 'myobject' from 'mycontainer'?",
+          "options": [
+            "swift list mycontainer",
+            "swift show mycontainer",
+            "swift upload mycontainer myobject",
+            "swift download mycontainer myobject"
+          ],
+          "answer": "swift download mycontainer myobject"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you set access control lists (ACLs) on containers and objects in Swift?",
+          "options": [
+            "Yes, using headers like X-Container-Read and X-Container-Write.",
+            "No, access is controlled only by Keystone tokens.",
+            "Only on objects, not containers.",
+            "Only on accounts, not containers or objects."
+          ],
+          "answer": "Yes, using headers like X-Container-Read and X-Container-Write."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary difference between SLO (Static Large Objects) and DLO (Dynamic Large Objects)?",
+          "options": [
+            "SLO uses a user-uploaded JSON manifest listing segments; DLO uses objects with a common prefix and a zero-byte manifest.",
+            "DLO is faster for uploads.",
+            "SLO supports larger objects.",
+            "SLO segments must be in the same container; DLO segments can be anywhere."
+          ],
+          "answer": "SLO uses a user-uploaded JSON manifest listing segments; DLO uses objects with a common prefix and a zero-byte manifest."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of replication in Swift?",
+          "options": [
+            "To ensure data durability and availability by copying objects to multiple locations.",
+            "To create backups for Cinder volumes.",
+            "To migrate data between storage nodes.",
+            "To validate data integrity."
+          ],
+          "answer": "To ensure data durability and availability by copying objects to multiple locations."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which process ensures data consistency across replicas in Swift?",
+          "options": [
+            "Auditor",
+            "Replicator",
+            "Updater",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a common use case for Swift?",
+          "options": [
+            "Storing backups and archives",
+            "Storing media files (images, videos)",
+            "Serving static web content",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        }
+      ]
+    },
+    {
+      "id": "openstack-6",
+      "title": "Keystone - Identity Service",
+      "description": "Focuses on OpenStack identity service.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Keystone?",
+          "options": [
+            "Networking",
+            "Block Storage",
+            "Compute",
+            "Identity and Access Management (authentication and authorization)"
+          ],
+          "answer": "Identity and Access Management (authentication and authorization)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'user' in Keystone?",
+          "options": [
+            "A virtual machine.",
+            "A network configuration.",
+            "An entity (person, system, or service) that uses OpenStack services.",
+            "A storage volume."
+          ],
+          "answer": "An entity (person, system, or service) that uses OpenStack services."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'project' (formerly 'tenant') in Keystone?",
+          "options": [
+            "A container used to group or isolate resources and/or identity objects.",
+            "A virtual machine.",
+            "A network configuration.",
+            "A storage volume."
+          ],
+          "answer": "A container used to group or isolate resources and/or identity objects."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'role' in Keystone?",
+          "options": [
+            "A set of permissions defining allowed actions.",
+            "A virtual machine.",
+            "A network configuration.",
+            "A storage volume."
+          ],
+          "answer": "A set of permissions defining allowed actions."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'endpoint' in Keystone?",
+          "options": [
+            "A network-accessible URL pointing to the API of an OpenStack service.",
+            "A virtual machine.",
+            "A user account.",
+            "A storage volume."
+          ],
+          "answer": "A network-accessible URL pointing to the API of an OpenStack service."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command-line tool is commonly used to interact with Keystone (using Identity API v3)?",
+          "options": ["keystone (legacy)", "openstack", "nova", "glance"],
+          "answer": "openstack"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'service catalog' provided by Keystone?",
+          "options": [
+            "A list of available OpenStack services and their API endpoints accessible to the authenticated user.",
+            "A list of registered users.",
+            "A list of active projects.",
+            "A list of defined roles."
+          ],
+          "answer": "A list of available OpenStack services and their API endpoints accessible to the authenticated user."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'token-based authentication' in Keystone?",
+          "options": [
+            "Using only a username and password for every API call.",
+            "Authenticating once with credentials (like password or application credential) to receive a temporary token, which is then used for subsequent API calls.",
+            "Using a physical security key.",
+            "Using biometric authentication."
+          ],
+          "answer": "Authenticating once with credentials (like password or application credential) to receive a temporary token, which is then used for subsequent API calls."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which database does Keystone commonly use?",
+          "options": ["SQLite", "MongoDB", "MySQL (or PostgreSQL)", "Redis"],
+          "answer": "MySQL (or PostgreSQL)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `keystone-manage` command?",
+          "options": [
+            "To manage individual user API tokens.",
+            "To configure network settings for Keystone.",
+            "To perform administrative tasks like database migrations, bootstrapping the identity service, and managing Fernet keys.",
+            "To directly edit the service catalog."
+          ],
+          "answer": "To perform administrative tasks like database migrations, bootstrapping the identity service, and managing Fernet keys."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'domain' in Keystone (Identity API v3)?",
+          "options": [
+            "A high-level container for projects, users, and groups, providing administrative boundaries and namespace separation.",
+            "A specific type of virtual machine.",
+            "A public network configuration.",
+            "A type of storage volume."
+          ],
+          "answer": "A high-level container for projects, users, and groups, providing administrative boundaries and namespace separation."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'federated identity' in Keystone?",
+          "options": [
+            "The ability to use credentials from an external identity provider (e.g., SAML 2.0, OpenID Connect) to authenticate with Keystone and access OpenStack.",
+            "The ability to link multiple user accounts within Keystone.",
+            "A feature for managing project hierarchies.",
+            "A method for creating custom roles."
+          ],
+          "answer": "The ability to use credentials from an external identity provider (e.g., SAML 2.0, OpenID Connect) to authenticate with Keystone and access OpenStack."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file is used to configure the Keystone service?",
+          "options": [
+            "/etc/keystone/keystone.conf",
+            "/etc/nova/nova.conf",
+            "/etc/cinder/cinder.conf",
+            "/etc/glance/glance-api.conf"
+          ],
+          "answer": "/etc/keystone/keystone.conf"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list users in Keystone using the unified client?",
+          "options": [
+            "openstack user list",
+            "openstack user show",
+            "openstack user create",
+            "keystone user-list"
+          ],
+          "answer": "openstack user list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a new user in Keystone using the unified client?",
+          "options": [
+            "openstack user list",
+            "openstack user show",
+            "openstack user create --password-prompt <username>",
+            "keystone user-create"
+          ],
+          "answer": "openstack user create --password-prompt <username>"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list projects in Keystone using the unified client?",
+          "options": [
+            "openstack project list",
+            "openstack project show",
+            "openstack project create",
+            "keystone project-list"
+          ],
+          "answer": "openstack project list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a new project in Keystone using the unified client?",
+          "options": [
+            "openstack project list",
+            "openstack project show",
+            "openstack project create <project_name>",
+            "keystone project-create"
+          ],
+          "answer": "openstack project create <project_name>"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list roles in Keystone using the unified client?",
+          "options": [
+            "openstack role list",
+            "openstack role show",
+            "openstack role create",
+            "keystone role-list"
+          ],
+          "answer": "openstack role list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to create a new role in Keystone using the unified client?",
+          "options": [
+            "openstack role list",
+            "openstack role show",
+            "openstack role create <role_name>",
+            "keystone role-create"
+          ],
+          "answer": "openstack role create <role_name>"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to assign a role to a user on a project using the unified client?",
+          "options": [
+            "keystone role-assignment-create",
+            "keystone user-role-add",
+            "openstack role add --user <user> --project <project> <role>",
+            "openstack add role"
+          ],
+          "answer": "openstack role add --user <user> --project <project> <role>"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the default administrative role in Keystone?",
+          "options": [
+            "admin",
+            "administrator",
+            "root",
+            "superuser"
+          ],
+          "answer": "admin"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'Fernet' in the context of Keystone?",
+          "options": [
+            "A type of database used by Keystone.",
+            "A specification for generating and verifying secure, stateless tokens using symmetric encryption, often preferred over UUID tokens for performance and scalability.",
+            "A network protocol used for Keystone communication.",
+            "A type of virtual machine image."
+          ],
+          "answer": "A specification for generating and verifying secure, stateless tokens using symmetric encryption, often preferred over UUID tokens for performance and scalability."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How does the `openstack` command-line client typically authenticate?",
+          "options": [
+            "By sending username and password with every command.",
+            "By first obtaining a temporary token from Keystone using credentials, then using that token in the headers of subsequent requests.",
+            "Using a pre-shared API key.",
+            "Using SSH keys."
+          ],
+          "answer": "By first obtaining a temporary token from Keystone using credentials, then using that token in the headers of subsequent requests."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'group' in Keystone?",
+          "options": [
+            "A collection of users, allowing roles to be assigned to the group instead of individually to each user.",
+            "A set of permissions.",
+            "A network configuration.",
+            "A collection of projects."
+          ],
+          "answer": "A collection of users, allowing roles to be assigned to the group instead of individually to each user."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How does Keystone integrate with other OpenStack services?",
+          "options": [
+            "Through a shared database.",
+            "Using direct RPC calls between services.",
+            "Services validate tokens presented by users/services against Keystone and use the service catalog from Keystone to find other services.",
+            "It doesn't integrate; services manage their own authentication."
+          ],
+          "answer": "Services validate tokens presented by users/services against Keystone and use the service catalog from Keystone to find other services."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `keystone-wsgi-admin` and `keystone-wsgi-public` services (when using Apache/Nginx)?",
+          "options": [
+            "To provide separate WSGI entry points for the administrative and public Identity API endpoints, often run on different ports.",
+            "To manage Fernet key rotation.",
+            "To handle database connections.",
+            "To serve the Horizon dashboard."
+          ],
+          "answer": "To provide separate WSGI entry points for the administrative and public Identity API endpoints, often run on different ports."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Identity API version is recommended for modern OpenStack deployments?",
+          "options": ["v2.0 (deprecated)", "v3", "v1", "v4 (not standard)"],
+          "answer": "v3"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary communication protocol used for the Keystone REST API?",
+          "options": ["HTTP/HTTPS", "SOAP", "RPC", "SSH"],
+          "answer": "HTTP/HTTPS"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Does Keystone natively support multi-factor authentication (MFA)?",
+          "options": [
+            "Yes, starting with certain releases, often via password + TOTP or other plugin methods.",
+            "No, it only supports username/password or external federation.",
+            "Only for the admin user.",
+            "Only via the V2 API."
+          ],
+          "answer": "Yes, starting with certain releases, often via password + TOTP or other plugin methods."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Does Keystone manage quotas for resources like instances or volumes?",
+          "options": [
+             "No, quota management is typically handled by the individual services (Nova, Cinder) but enforced based on project limits potentially defined/queried via Keystone.",
+             "Yes, Keystone sets all resource quotas directly.",
+             "Only for user-specific quotas, not project quotas.",
+             "Only for network quotas."
+          ],
+          "answer": "No, quota management is typically handled by the individual services (Nova, Cinder) but enforced based on project limits potentially defined/queried via Keystone."
+        }
+      ]
+    },
+    {
+      "id": "openstack-7",
+      "title": "Glance - Image Service",
+      "description": "Focuses on OpenStack image service.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Glance?",
+          "options": [
+            "Networking",
+            "Block Storage",
+            "Compute",
+            "Image Service (discovering, registering, and retrieving virtual machine images)"
+          ],
+          "answer": "Image Service (discovering, registering, and retrieving virtual machine images)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'image' in OpenStack Glance?",
+          "options": [
+            "A running virtual machine.",
+            "A network configuration.",
+            "A file containing a bootable OS or data, used as a template for VMs or volumes.",
+            "A user account."
+          ],
+          "answer": "A file containing a bootable OS or data, used as a template for VMs or volumes."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command-line tool is commonly used to interact with Glance?",
+          "options": ["glance", "cinder", "nova", "openstack image"],
+          "answer": "openstack image"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What are common 'disk formats' supported by Glance?",
+          "options": [
+            "raw, qcow2, vmdk, vdi, iso, aki, ari, ami",
+            "txt, pdf, doc, xls",
+            "mp3, wav, flac, ogg",
+            "exe, dmg, apk, deb"
+          ],
+          "answer": "raw, qcow2, vmdk, vdi, iso, aki, ari, ami"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of `glance-api`?",
+          "options": [
+            "To directly manage image storage backends.",
+            "To provide the REST API endpoint for Glance requests and interact with the registry/database.",
+            "To schedule image uploads.",
+            "To perform image format conversions."
+          ],
+          "answer": "To provide the REST API endpoint for Glance requests and interact with the registry/database."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What was the role of `glance-registry` (now integrated into glance-api)?",
+          "options": [
+            "Managed image file storage.",
+            "Provided a separate service for storing and retrieving image metadata (now handled internally by glance-api).",
+            "Scheduled image downloads.",
+            "Performed image caching."
+          ],
+          "answer": "Provided a separate service for storing and retrieving image metadata (now handled internally by glance-api)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which storage backends are commonly supported by Glance?",
+          "options": ["File system, Swift, Ceph (RBD), Cinder, HTTP, VMware datastore", "Only LVM", "Only NFS", "Only iSCSI"],
+          "answer": "File system, Swift, Ceph (RBD), Cinder, HTTP, VMware datastore"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does 'image visibility' control in Glance?",
+          "options": [
+            "The size of the image file.",
+            "Who can discover and use the image (e.g., public, private, shared, community).",
+            "The disk format of the image.",
+            "The physical location of the image data."
+          ],
+          "answer": "Who can discover and use the image (e.g., public, private, shared, community)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the difference between a 'public' image and a 'private' image?",
+          "options": [
+            "Public images are larger.",
+            "Public images are accessible by all projects; private images are typically only accessible by the project that owns them.",
+            "Public images must be in 'raw' format.",
+            "Private images are always encrypted."
+          ],
+          "answer": "Public images are accessible by all projects; private images are typically only accessible by the project that owns them."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you upload images to Glance?",
+          "options": [
+            "Yes, using the API or command-line tools.",
+            "No, images must be imported from external sources.",
+            "Only administrators can upload images.",
+            "Only small images can be uploaded directly."
+          ],
+          "answer": "Yes, using the API or command-line tools."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you download image data from Glance?",
+          "options": [
+            "Yes, if you have permission to access the image.",
+            "No, images can only be used to boot instances.",
+            "Only public images can be downloaded.",
+            "Only administrators can download images."
+          ],
+          "answer": "Yes, if you have permission to access the image."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you delete images from Glance?",
+          "options": [
+            "Yes, if you own the image or have administrative privileges.",
+            "No, images are immutable once uploaded.",
+            "Only public images can be deleted.",
+            "Only unused images can be deleted."
+          ],
+          "answer": "Yes, if you own the image or have administrative privileges."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'image conversion' in the context of OpenStack (often handled by other tools)?",
+          "options": [
+            "Changing the visibility status of an image.",
+            "Changing the file format of an image (e.g., converting VMDK to QCOW2).",
+            "Uploading an image to Glance.",
+            "Deleting an image."
+          ],
+          "answer": "Changing the file format of an image (e.g., converting VMDK to QCOW2)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'image caching' in Glance?",
+          "options": [
+            "A feature where Glance can cache frequently accessed images locally on compute nodes to speed up instance boot times.",
+            "Storing images in a compressed format by default.",
+            "Encrypting images at rest.",
+            "Creating backups of images."
+          ],
+          "answer": "A feature where Glance can cache frequently accessed images locally on compute nodes to speed up instance boot times."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which database does Glance commonly use for its metadata?",
+          "options": ["SQLite", "MongoDB", "MySQL (or PostgreSQL)", "Redis"],
+          "answer": "MySQL (or PostgreSQL)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to list images in Glance using the unified client?",
+          "options": [
+            "openstack image list",
+            "openstack image show",
+            "openstack image create",
+            "glance image-list"
+          ],
+          "answer": "openstack image list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to upload a local file 'my-image.qcow2' as an image named 'MyUploadedImage'?",
+          "options": [
+            "openstack image list",
+            "openstack image show MyUploadedImage",
+            "openstack image create --file my-image.qcow2 --disk-format qcow2 MyUploadedImage",
+            "glance image-create"
+          ],
+          "answer": "openstack image create --file my-image.qcow2 --disk-format qcow2 MyUploadedImage"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to download an image named 'MyImageToDownload' to a local file 'downloaded.img'?",
+          "options": [
+            "openstack image save --file downloaded.img MyImageToDownload",
+            "openstack image show MyImageToDownload",
+            "openstack image create MyImageToDownload",
+            "glance image-download"
+          ],
+          "answer": "openstack image save --file downloaded.img MyImageToDownload"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the command to delete an image named 'ImageToDelete'?",
+          "options": [
+            "openstack image list",
+            "openstack image show ImageToDelete",
+            "openstack image create ImageToDelete",
+            "openstack image delete ImageToDelete"
+          ],
+          "answer": "openstack image delete ImageToDelete"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file is used to configure the Glance API service?",
+          "options": [
+            "/etc/glance/glance-api.conf",
+            "/etc/nova/nova.conf",
+            "/etc/cinder/cinder.conf",
+            "/etc/keystone/keystone.conf"
+          ],
+          "answer": "/etc/glance/glance-api.conf"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'multi-store' configuration in Glance?",
+          "options": [
+            "Using multiple databases for metadata.",
+            "Configuring Glance to use multiple storage backends simultaneously (e.g., store some images in Swift, some on the filesystem).",
+            "Running multiple glance-api processes.",
+            "Supporting multiple image formats."
+          ],
+          "answer": "Configuring Glance to use multiple storage backends simultaneously (e.g., store some images in Swift, some on the filesystem)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of image properties (metadata) in Glance?",
+          "options": [
+            "To define the file size.",
+            "To store additional, arbitrary key-value information about an image (e.g., OS distribution, architecture, kernel ID).",
+            "To set the visibility (public/private).",
+            "To define the disk format."
+          ],
+          "answer": "To store additional, arbitrary key-value information about an image (e.g., OS distribution, architecture, kernel ID)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can Glance images be encrypted?",
+          "options": [
+            "Yes, Glance supports encrypting image data at rest, typically configured per backend.",
+            "No, encryption must be handled by the storage backend itself.",
+            "Only if using the Cinder backend.",
+            "Only for private images."
+          ],
+          "answer": "Yes, Glance supports encrypting image data at rest, typically configured per backend."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'image signing' in Glance?",
+          "options": [
+            "Adding a digital signature to image metadata and optionally data to verify its integrity and authenticity before use.",
+            "Compressing an image file.",
+            "Encrypting an image file.",
+            "Converting an image to a different format."
+          ],
+          "answer": "Adding a digital signature to image metadata and optionally data to verify its integrity and authenticity before use."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the difference between a Glance image and a Nova instance snapshot?",
+          "options": [
+            "There is no difference; snapshots are stored as images.",
+            "An image is typically a base OS template; a snapshot is a point-in-time copy of a *running* or *stopped* instance's disk state, often stored back in Glance as a private image.",
+            "Images are public; snapshots are private.",
+            "Snapshots are stored in Cinder; images are stored in Swift."
+          ],
+          "answer": "An image is typically a base OS template; a snapshot is a point-in-time copy of a *running* or *stopped* instance's disk state, often stored back in Glance as a private image."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is 'image staging' in Glance?",
+          "options": [
+            "A temporary storage area used during image uploads before the image data is committed to the final backend storage.",
+            "The process of deleting old images.",
+            "The process of converting image formats.",
+            "The process of sharing an image."
+          ],
+          "answer": "A temporary storage area used during image uploads before the image data is committed to the final backend storage."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does the `direct_url` property in image metadata typically indicate?",
+          "options": [
+            "A direct URL (e.g., HTTP) from which Glance can download the image data, bypassing local upload.",
+            "The URL for the Glance API.",
+            "The URL for the OpenStack dashboard.",
+            "A URL for image documentation."
+          ],
+          "answer": "A direct URL (e.g., HTTP) from which Glance can download the image data, bypassing local upload."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of `glance-scrubber`?",
+          "options": [
+            "A utility service that cleans up images marked for deletion (status 'pending_delete' or 'deleted').",
+            "The main API service.",
+            "A tool for defining image metadata.",
+            "A service for image format conversion."
+          ],
+          "answer": "A utility service that cleans up images marked for deletion (status 'pending_delete' or 'deleted')."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How can you share a private image you own with another specific project/tenant?",
+          "options": [
+            "Make the image public.",
+            "Use the `openstack image add project <image> <project_id>` command (or API equivalent) to grant access.",
+            "Download and re-upload the image into the other project.",
+            "You cannot share private images between projects."
+          ],
+          "answer": "Use the `openstack image add project <image> <project_id>` command (or API equivalent) to grant access."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is NOT a valid image status in Glance?",
+          "options": ["active", "queued", "saving", "booting"],
+          "answer": "booting"
+        }
+      ]
+    },
+    {
+      "id": "openstack-8",
+      "title": "Horizon - Dashboard",
+      "description": "Focuses on OpenStack dashboard.",
+      "difficulty": "easy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of OpenStack Horizon?",
+          "options": [
+            "Command-line interface",
+            "REST API gateway",
+            "Web-based graphical user interface (GUI) for managing OpenStack resources.",
+            "Database management tool."
+          ],
+          "answer": "Web-based graphical user interface (GUI) for managing OpenStack resources."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which web server technology is commonly used to serve the Horizon dashboard?",
+          "options": [
+            "Apache HTTP Server (with mod_wsgi) or Nginx (with uWSGI/Gunicorn)",
+            "Microsoft IIS",
+            "Node.js Express",
+            "Java Tomcat"
+          ],
+          "answer": "Apache HTTP Server (with mod_wsgi) or Nginx (with uWSGI/Gunicorn)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is Horizon required to use OpenStack?",
+          "options": [
+            "Yes, it's the only way to interact with OpenStack.",
+            "No, OpenStack can be fully managed using command-line tools (like the `openstack` client) and APIs.",
+            "Yes, but only for administrative tasks.",
+            "No, but it's required for launching instances."
+          ],
+          "answer": "No, OpenStack can be fully managed using command-line tools (like the `openstack` client) and APIs."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which OpenStack services can you typically manage through Horizon?",
+          "options": [
+            "Compute (Nova), Networking (Neutron), Storage (Cinder, Swift), Identity (Keystone)",
+            "Only Compute (Nova)",
+            "Only Networking (Neutron)",
+            "Only Identity (Keystone)"
+          ],
+          "answer": "Compute (Nova), Networking (Neutron), Storage (Cinder, Swift), Identity (Keystone)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you launch instances (virtual machines) from Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only if you have administrative privileges.",
+            "Only small instances."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you create and manage networks and subnets from Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only administrators can.",
+            "Only basic network viewing is possible."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you create and manage Cinder volumes and snapshots from Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only viewing volumes is possible.",
+            "Only administrators can create volumes."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you manage users, projects, and roles from Horizon?",
+          "options": [
+            "Yes, typically within the 'Identity' or 'Admin' panels if you have the necessary permissions.",
+            "No, identity management is only done through the command line.",
+            "Yes, all users can manage all other users and projects.",
+            "No, Horizon doesn't interact with Keystone for management."
+          ],
+          "answer": "Yes, typically within the 'Identity' or 'Admin' panels if you have the necessary permissions."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you view the API Access (Service Catalog and Endpoints) from Horizon?",
+          "options": [
+            "Yes, typically under user settings or API access sections.",
+            "No",
+            "Only administrators can view endpoints.",
+            "The service catalog is only available via the API."
+          ],
+          "answer": "Yes, typically under user settings or API access sections."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'Project Overview' panel in Horizon typically used for?",
+          "options": [
+            "To display a summary of resource usage (instances, VCPUs, RAM, IPs, volumes) and quotas for the current project.",
+            "To create new instances.",
+            "To manage network topology.",
+            "To manage user passwords."
+          ],
+          "answer": "To display a summary of resource usage (instances, VCPUs, RAM, IPs, volumes) and quotas for the current project."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'Instances' panel in Horizon used for?",
+          "options": [
+            "Managing networks.",
+            "Managing volumes.",
+            "Launching, stopping, restarting, deleting, and managing virtual machine instances.",
+            "Managing user accounts."
+          ],
+          "answer": "Launching, stopping, restarting, deleting, and managing virtual machine instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'Network Topology' view in Horizon useful for?",
+          "options": [
+            "Listing instances.",
+            "Managing volumes.",
+            "Visualizing networks, routers, and the instances connected to them.",
+            "Editing security group rules."
+          ],
+          "answer": "Visualizing networks, routers, and the instances connected to them."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'Volumes' panel in Horizon used for?",
+          "options": [
+            "Managing instances.",
+            "Managing networks.",
+            "Creating, attaching, detaching, deleting, and managing block storage volumes and their snapshots.",
+            "Managing object storage containers."
+          ],
+          "answer": "Creating, attaching, detaching, deleting, and managing block storage volumes and their snapshots."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the 'Images' panel in Horizon used for?",
+          "options": [
+            "Managing instance snapshots only.",
+            "Managing Cinder volume backups.",
+            "Browsing, uploading, and managing Glance images used to launch instances.",
+            "Managing user profile pictures."
+          ],
+          "answer": "Browsing, uploading, and managing Glance images used to launch instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file typically contains local customizations and settings for the Horizon service?",
+          "options": [
+            "/etc/horizon/local_settings.py",
+            "/etc/openstack-dashboard/settings.py",
+            "/etc/nova/nova.conf",
+            "/etc/httpd/conf.d/openstack-dashboard.conf"
+          ],
+          "answer": "/etc/horizon/local_settings.py"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you customize the appearance (theme, branding) of Horizon?",
+          "options": [
+            "Yes, through theme settings in `local_settings.py` and by overriding CSS and templates.",
+            "No, the appearance is fixed.",
+            "Only by recompiling Horizon.",
+            "Only administrators can change the logo."
+          ],
+          "answer": "Yes, through theme settings in `local_settings.py` and by overriding CSS and templates."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you extend Horizon's functionality with plugins?",
+          "options": [
+            "Yes, Horizon has a plugin architecture allowing addition of new panels and features.",
+            "No, plugins are not supported.",
+            "Only official OpenStack plugins are allowed.",
+            "Plugins are only for changing the theme."
+          ],
+          "answer": "Yes, Horizon has a plugin architecture allowing addition of new panels and features."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What web framework is Horizon built upon?",
+          "options": [
+            "Ruby on Rails",
+            "Django (Python web framework)",
+            "Flask (Python microframework)",
+            "Angular (JavaScript framework)"
+          ],
+          "answer": "Django (Python web framework)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How do users typically access the Horizon dashboard?",
+          "options": [
+            "Via a web browser.",
+            "Using a dedicated desktop client application.",
+            "Only through SSH.",
+            "Using the `openstack` command-line tool."
+          ],
+          "answer": "Via a web browser."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the typical default URL path for accessing the Horizon dashboard?",
+          "options": [
+            "/horizon",
+            "/dashboard",
+            "/openstack",
+            "/admin"
+          ],
+          "answer": "/horizon"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What authentication methods does Horizon typically support (via Keystone)?",
+          "options": [
+            "Username/Password",
+            "Federated Identity (SAML, OIDC)",
+            "Application Credentials",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What can users typically manage in the 'Settings' panel in Horizon?",
+          "options": [
+            "Change their password, download OpenStack RC files, manage API keys/credentials.",
+            "Create new instances.",
+            "Configure network routers.",
+            "Manage global cloud settings (admin only)."
+          ],
+          "answer": "Change their password, download OpenStack RC files, manage API keys/credentials."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is it possible to create snapshots of running instances through Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only if the instance is stopped.",
+            "Only from the command line."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you access instance consoles (like VNC or SPICE) through Horizon?",
+          "options": [
+            "Yes, typically via an embedded console interface.",
+            "No",
+            "Only if you have administrative privileges.",
+            "Only via a separate remote desktop client."
+          ],
+          "answer": "Yes, typically via an embedded console interface."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you create and manage SSH key pairs through Horizon?",
+          "options": [
+            "Yes, usually under Compute -> Key Pairs.",
+            "No",
+            "Only administrators can manage key pairs.",
+            "Only from the command line."
+          ],
+          "answer": "Yes, usually under Compute -> Key Pairs."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you associate/disassociate floating IP addresses with instances through Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only administrators can manage floating IPs.",
+            "Only from the command line."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you create and manage security groups and their rules through Horizon?",
+          "options": [
+            "Yes",
+            "No",
+            "Only default security groups can be viewed.",
+            "Only from the command line."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you view instance logs through Horizon?",
+          "options": [
+            "Yes, Horizon typically provides access to the instance console log.",
+            "No, logs are only accessible via SSH or logging services.",
+            "Yes, all system logs are streamed to Horizon.",
+            "Only administrators can view logs."
+          ],
+          "answer": "Yes, Horizon typically provides access to the instance console log."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can you launch and manage Heat orchestration stacks through Horizon (if the Heat plugin is installed)?",
+          "options": [
+            "Yes, via the 'Orchestration' panel.",
+            "No, Heat is only managed via CLI/API.",
+            "Only viewing stack status is possible.",
+            "Only administrators can launch stacks."
+          ],
+          "answer": "Yes, via the 'Orchestration' panel."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Does Horizon enforce Role-Based Access Control (RBAC)?",
+          "options": [
+            "Yes, the actions and panels visible/available to a user depend on the roles assigned to them in Keystone.",
+            "No, all logged-in users see the same interface.",
+            "Only administrators have restricted views.",
+            "RBAC is configured within Horizon itself."
+          ],
+          "answer": "Yes, the actions and panels visible/available to a user depend on the roles assigned to them in Keystone."
+        }
+      ]
+    },
+    {
+      "id": "openstack-9",
+      "title": "Heat - Orchestration",
+      "description": "Focuses on OpenStack orchestration.",
+      "difficulty": "hard",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary purpose of OpenStack Heat?",
+          "options": [
+            "Identity and access management",
+            "Block storage management",
+            "Orchestration service to manage the lifecycle of infrastructure and applications described in templates.",
+            "Networking as a Service"
+          ],
+          "answer": "Orchestration service to manage the lifecycle of infrastructure and applications described in templates."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which template format is native to Heat?",
+          "options": ["JSON", "XML", "HOT (Heat Orchestration Template - YAML based)", "CloudFormation (JSON/YAML - Compatibility layer)"],
+          "answer": "HOT (Heat Orchestration Template - YAML based)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the main component of Heat that processes templates and interacts with other OpenStack APIs to manage resources?",
+          "options": [
+            "heat-api",
+            "heat-engine",
+            "heat-api-cfn",
+            "heat-client"
+          ],
+          "answer": "heat-engine"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which section of a HOT template defines the cloud resources (like servers, networks, volumes) to be created?",
+          "options": ["parameters", "resources", "outputs", "description"],
+          "answer": "resources"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `heat_template_version` key in a HOT template?",
+          "options": [
+            "To specify the version of the OpenStack cloud.",
+            "To specify the version of the Heat engine.",
+            "To specify the version of the HOT template format being used.",
+            "To specify the API version of the resources being created."
+          ],
+          "answer": "To specify the version of the HOT template format being used."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which intrinsic function is used to retrieve the value of an input parameter within a template?",
+          "options": ["get_resource", "get_attr", "get_param", "str_replace"],
+          "answer": "get_param"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'stack' in the context of Heat?",
+          "options": [
+            "A specific version of a Heat template.",
+            "A grouping of Heat engines.",
+            "A collection of related cloud resources provisioned and managed together based on a template.",
+            "A type of OpenStack storage resource."
+          ],
+          "answer": "A collection of related cloud resources provisioned and managed together based on a template."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which resource type is used in a HOT template to create a Nova compute instance?",
+          "options": [
+            "OS::Neutron::Net",
+            "OS::Cinder::Volume",
+            "OS::Nova::Server",
+            "OS::Glance::Image"
+          ],
+          "answer": "OS::Nova::Server"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `depends_on` attribute within a resource definition?",
+          "options": [
+            "To link to an external template.",
+            "To specify explicit dependencies, ensuring one resource is created or updated before another.",
+            "To define input parameters for the resource.",
+            "To declare output values from the resource."
+          ],
+          "answer": "To specify explicit dependencies, ensuring one resource is created or updated before another."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command (using the unified client) is used to create a new stack named 'my-stack' from a template file 'my-template.yaml'?",
+          "options": [
+            "openstack server create my-stack",
+            "openstack network create my-stack",
+            "openstack stack create -t my-template.yaml my-stack",
+            "openstack volume create my-stack"
+          ],
+          "answer": "openstack stack create -t my-template.yaml my-stack"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `outputs` section in a HOT template?",
+          "options": [
+            "To define input parameters.",
+            "To list the resources being created.",
+            "To declare values (like IP addresses or resource IDs) that can be easily queried after the stack is created.",
+            "To specify dependencies between resources."
+          ],
+          "answer": "To declare values (like IP addresses or resource IDs) that can be easily queried after the stack is created."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Heat component provides an AWS CloudFormation-compatible API endpoint?",
+          "options": [
+            "heat-api",
+            "heat-engine",
+            "heat-api-cfn",
+            "heat-translator"
+          ],
+          "answer": "heat-api-cfn"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the role of resource type plugins in Heat?",
+          "options": [
+            "To translate templates between formats.",
+            "To store the state of a stack.",
+            "To provide the logic for interacting with the APIs of other OpenStack services to manage specific resource types (e.g., OS::Nova::Server plugin talks to Nova API).",
+            "To provide the Heat REST API."
+          ],
+          "answer": "To provide the logic for interacting with the APIs of other OpenStack services to manage specific resource types (e.g., OS::Nova::Server plugin talks to Nova API)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which database is commonly used by Heat to store stack state and metadata?",
+          "options": ["SQLite", "MongoDB", "MySQL (or PostgreSQL)", "Redis"],
+          "answer": "MySQL (or PostgreSQL)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of an environment file when launching a Heat stack?",
+          "options": [
+            "It replaces the main template file.",
+            "To provide values for input parameters defined in the template and potentially register custom resource types.",
+            "To define the resources in the stack.",
+            "To specify the desired output format."
+          ],
+          "answer": "To provide values for input parameters defined in the template and potentially register custom resource types."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the typical status of a stack that has been successfully created or updated?",
+          "options": [
+            "CREATE_IN_PROGRESS",
+            "CREATE_FAILED",
+            "CREATE_COMPLETE / UPDATE_COMPLETE",
+            "IN_PROGRESS"
+          ],
+          "answer": "CREATE_COMPLETE / UPDATE_COMPLETE"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which intrinsic function is used to retrieve an attribute (like an IP address or ID) of another resource defined within the same template?",
+          "options": ["get_param", "get_resource", "get_attr", "list_join"],
+          "answer": "get_attr"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'nested stack' in Heat?",
+          "options": [
+            "A stack whose template includes resources of type OS::Heat::Stack, allowing modular composition.",
+            "A stack that has failed during creation.",
+            "A stack that has been suspended.",
+            "A stack managing resources within a virtualized environment."
+          ],
+          "answer": "A stack whose template includes resources of type OS::Heat::Stack, allowing modular composition."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which group of resource types (OS::Heat::SoftwareConfig, OS::Heat::SoftwareDeployment, OS::Heat::SoftwareDeploymenGroup) are used for?",
+          "options": [
+            "Managing network configurations.",
+            "Creating storage volumes.",
+            "Orchestrating software configuration and deployment on created instances.",
+            "Defining user roles."
+          ],
+          "answer": "Orchestrating software configuration and deployment on created instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does stack 'update' typically involve in Heat?",
+          "options": [
+            "Only changing the stack name.",
+            "Applying a modified template or parameters, causing Heat to calculate and make the necessary changes (create, update, delete) to resources.",
+            "Restarting the heat-engine service.",
+            "Deleting and recreating the entire stack."
+          ],
+          "answer": "Applying a modified template or parameters, causing Heat to calculate and make the necessary changes (create, update, delete) to resources."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command lists all the stacks managed by Heat?",
+          "options": [
+            "openstack stack show",
+            "openstack resource list",
+            "openstack stack list",
+            "openstack template list"
+          ],
+          "answer": "openstack stack list"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which command shows the details of a specific stack, including its status, outputs, and parameters?",
+          "options": [
+            "openstack stack list",
+            "openstack stack show <stack_name_or_id>",
+            "openstack resource list <stack_name_or_id>",
+            "openstack event list <stack_name_or_id>"
+          ],
+          "answer": "openstack stack show <stack_name_or_id>"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the function of `get_resource` in a Heat template?",
+          "options": [
+            "To retrieve the value of an input parameter.",
+            "To retrieve the unique ID or reference of another resource defined in the template.",
+            "To retrieve a specific attribute of another resource.",
+            "To import an external resource."
+          ],
+          "answer": "To retrieve the unique ID or reference of another resource defined in the template."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is stack 'drift' detection in Heat?",
+          "options": [
+            "Detecting if the Heat service itself has errors.",
+            "Detecting differences between the actual state of cloud resources and the state expected according to the stack's template.",
+            "Detecting network latency issues.",
+            "Detecting changes in the template file."
+          ],
+          "answer": "Detecting differences between the actual state of cloud resources and the state expected according to the stack's template."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is a valid Heat template version date format?",
+          "options": [
+            "1.0",
+            "Rocky",
+            "2018-08-31",
+            "HeatV3"
+          ],
+          "answer": "2018-08-31"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of the `constraints` section within a parameter definition?",
+          "options": [
+            "To define the parameter's default value.",
+            "To specify rules (e.g., allowed values, length, pattern) that the parameter's input value must satisfy.",
+            "To make the parameter mandatory.",
+            "To hide the parameter from the user interface."
+          ],
+          "answer": "To specify rules (e.g., allowed values, length, pattern) that the parameter's input value must satisfy."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following is NOT a typical stack status?",
+          "options": [
+            "UPDATE_COMPLETE",
+            "DELETE_FAILED",
+            "ROLLBACK_COMPLETE",
+            "CREATE_PENDING"
+          ],
+          "answer": "CREATE_PENDING"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can Heat templates provision resources across multiple availability zones?",
+          "options": [
+            "Yes, resource types like OS::Nova::Server often have an 'availability_zone' property.",
+            "No, stacks are limited to a single AZ.",
+            "Only via nested stacks, one per AZ.",
+            "Only if using the CloudFormation compatibility API."
+          ],
+          "answer": "Yes, resource types like OS::Nova::Server often have an 'availability_zone' property."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary communication method between `heat-api` and `heat-engine`?",
+          "options": [
+            "Direct function calls within the same process.",
+            "Shared memory.",
+            "REST API calls.",
+            "Asynchronous RPC calls over a message queue (like RabbitMQ)."
+          ],
+          "answer": "Asynchronous RPC calls over a message queue (like RabbitMQ)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which file typically holds the main configuration for the Heat engine and API services?",
+          "options": [
+            "/etc/nova/nova.conf",
+            "/etc/heat/heat.conf",
+            "/etc/cinder/cinder.conf",
+            "/etc/keystone/keystone.conf"
+          ],
+          "answer": "/etc/heat/heat.conf"
+        }
+      ]
+    }
+  ],
+  "security": [
+    {
+      "id": "security-1",
+      "title": "Basic Security Concepts",
+      "description": "Test your knowledge of fundamental security principles.",
+      "difficulty": "easy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What are the three core principles of the CIA triad in information security?",
+          "options": [
+            "Confidentiality, Integrity, Availability",
+            "Cryptography, Intrusion Detection, Access Control",
+            "Compliance, Investigation, Auditing",
+            "Certification, Implementation, Authorization"
+          ],
+          "answer": "Confidentiality, Integrity, Availability"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the principle of least privilege?",
+          "options": [
+            "Granting users only the minimum permissions necessary to perform their job functions.",
+            "Giving all users administrative rights by default.",
+            "Allowing users to access any resource upon request.",
+            "Providing temporary access to all sensitive data."
+          ],
+          "answer": "Granting users only the minimum permissions necessary to perform their job functions."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a firewall?",
+          "options": [
+            "A network security device (hardware or software) that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+            "A system solely for detecting intrusions.",
+            "A method for encrypting data transmissions.",
+            "A tool for managing user passwords."
+          ],
+          "answer": "A network security device (hardware or software) that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does VPN stand for and what is its primary purpose?",
+          "options": [
+            "Virtual Private Network - Creates a secure, encrypted connection over a public network.",
+            "Very Powerful Network - Enhances network speed.",
+            "Virtual Public Network - Makes private networks public.",
+            "Verified Protected Network - Verifies network packets."
+          ],
+          "answer": "Virtual Private Network - Creates a secure, encrypted connection over a public network."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is encryption?",
+          "options": [
+            "The process of converting plaintext data into ciphertext to prevent unauthorized access.",
+            "The process of hiding data within other data (steganography).",
+            "The process of verifying the identity of a user (authentication).",
+            "The process of compressing data."
+          ],
+          "answer": "The process of converting plaintext data into ciphertext to prevent unauthorized access."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is multi-factor authentication (MFA)?",
+          "options": [
+            "Using multiple different passwords for different systems.",
+            "Requiring two or more distinct verification factors (e.g., something you know, something you have, something you are) to authenticate.",
+            "Using only biometric authentication.",
+            "Using a single, very long password."
+          ],
+          "answer": "Requiring two or more distinct verification factors (e.g., something you know, something you have, something you are) to authenticate."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is social engineering?",
+          "options": [
+            "The psychological manipulation of people into performing actions or divulging confidential information.",
+            "Using advanced technical skills to exploit software vulnerabilities.",
+            "Designing secure network architectures.",
+            "Managing security policies and procedures."
+          ],
+          "answer": "The psychological manipulation of people into performing actions or divulging confidential information."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a phishing attack?",
+          "options": [
+            "An attempt to trick users into revealing sensitive information (like credentials or credit card numbers) by masquerading as a trustworthy entity in electronic communication.",
+            "A type of malware that encrypts files and demands ransom (ransomware).",
+            "An attack that exploits unpatched software vulnerabilities.",
+            "An attack that overwhelms a server with excessive traffic (DoS)."
+          ],
+          "answer": "An attempt to trick users into revealing sensitive information (like credentials or credit card numbers) by masquerading as a trustworthy entity in electronic communication."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is malware?",
+          "options": [
+            "Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems (e.g., viruses, worms, trojans, ransomware).",
+            "A type of network firewall.",
+            "A security protocol for wireless networks.",
+            "A category of user account."
+          ],
+          "answer": "Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems (e.g., viruses, worms, trojans, ransomware)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a DDoS attack?",
+          "options": [
+            "Distributed Denial of Service - An attack where multiple compromised systems flood a target system with traffic, making it unavailable to legitimate users.",
+            "Data Deletion on Server - An attack that wipes server data.",
+            "Direct Domain Override Service - An attack targeting DNS.",
+            "Dynamic Data Obfuscation System - A method of hiding data."
+          ],
+          "answer": "Distributed Denial of Service - An attack where multiple compromised systems flood a target system with traffic, making it unavailable to legitimate users."
+        }
+      ]
+    },
+    {
+      "id": "security-2",
+      "title": "Firewall Rules",
+      "description": "Practice configuring firewall rules.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "In firewall terminology, what is typically the default action if no explicit rule matches the traffic?",
+          "options": ["Allow", "Deny", "Log and Allow", "Ask User"],
+          "answer": "Deny"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What distinguishes a stateful firewall from a stateless firewall?",
+          "options": [
+            "A stateful firewall tracks the state of active network connections and makes decisions based on connection context, while stateless firewalls examine packets individually.",
+            "Stateless firewalls are faster.",
+            "Stateful firewalls only work for TCP traffic.",
+            "Stateless firewalls use application-layer inspection."
+          ],
+          "answer": "A stateful firewall tracks the state of active network connections and makes decisions based on connection context, while stateless firewalls examine packets individually."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an 'implicit deny' rule?",
+          "options": [
+            "A rule explicitly configured with the action 'DENY'.",
+            "An unwritten rule, usually at the end of the ruleset, that denies any traffic not explicitly allowed by preceding rules.",
+            "A rule that allows all traffic by default.",
+            "A rule that logs denied traffic."
+          ],
+          "answer": "An unwritten rule, usually at the end of the ruleset, that denies any traffic not explicitly allowed by preceding rules."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these components are commonly used to define a firewall rule?",
+          "options": [
+            "Source IP Address/Range",
+            "Destination IP Address/Range",
+            "Protocol (TCP, UDP, ICMP) and Port Number(s)",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does ACL stand for in the context of firewalls and routers?",
+          "options": [
+            "Access Control List",
+            "Advanced Configuration Language",
+            "Application Control Logic",
+            "Automated Connection Logging"
+          ],
+          "answer": "Access Control List"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of a Demilitarized Zone (DMZ) in network architecture?",
+          "options": [
+            "To isolate publicly accessible servers (like web or mail servers) from the internal private network, adding a layer of security.",
+            "To store highly sensitive internal data.",
+            "To establish VPN connections.",
+            "To host database servers exclusively."
+          ],
+          "answer": "To isolate publicly accessible servers (like web or mail servers) from the internal private network, adding a layer of security."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does NAT (Network Address Translation) primarily do?",
+          "options": [
+            "Modifies network address information in IP packet headers, often allowing multiple devices on a private network to share a single public IP address.",
+            "Encrypts network traffic.",
+            "Assigns IP addresses dynamically (DHCP).",
+            "Authenticates network users."
+          ],
+          "answer": "Modifies network address information in IP packet headers, often allowing multiple devices on a private network to share a single public IP address."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is port forwarding (or port mapping)?",
+          "options": [
+            "A technique used with NAT to redirect communication requests from a specific external port on a router/firewall to a specific internal IP address and port.",
+            "Blocking all traffic on a specific port.",
+            "Allowing all traffic on all ports.",
+            "Changing the source port of outgoing traffic."
+          ],
+          "answer": "A technique used with NAT to redirect communication requests from a specific external port on a router/firewall to a specific internal IP address and port."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which protocol is generally preferred for securely managing a firewall remotely via command line?",
+          "options": ["SSH (Secure Shell)", "Telnet", "FTP", "HTTP"],
+          "answer": "SSH (Secure Shell)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "To allow incoming web traffic to a web server at 192.168.1.100 in your DMZ, which firewall rule is most appropriate (assuming external interface is 'eth0')?",
+          "options": [
+            "ALLOW IN eth0 proto TCP from ANY to 192.168.1.100 port 80, 443",
+            "DENY IN eth0 proto ANY from ANY to ANY",
+            "ALLOW OUT eth0 proto TCP from 192.168.1.100 to ANY port 80, 443",
+            "ALLOW IN eth0 proto ANY from ANY to 192.168.1.100"
+          ],
+          "answer": "ALLOW IN eth0 proto TCP from ANY to 192.168.1.100 port 80, 443"
+        }
+      ]
+    }
+  ],
+  "aws": [
+    {
+      "id": "aws-storage-1",
+      "title": "AWS Storage",
+      "description": "Focuses on AWS storage services like S3, EBS, EFS, and Glacier.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides scalable object storage suitable for backups, static websites, and big data analytics?",
+          "options": ["Amazon S3", "Amazon EBS", "Amazon EFS", "Amazon RDS"],
+          "answer": "Amazon S3"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the designed durability level for the Amazon S3 Standard storage class?",
+          "options": ["99.9%", "99.99%", "99.999999999% (11 9's)", "100%"],
+          "answer": "99.999999999% (11 9's)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS storage service provides persistent block storage volumes for use with EC2 instances?",
+          "options": ["Amazon S3", "Amazon EBS", "Amazon EFS", "Amazon Glacier"],
+          "answer": "Amazon EBS"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which Amazon EBS volume type is recommended for latency-sensitive transactional workloads requiring high IOPS?",
+          "options": [
+            "General Purpose SSD (gp3)",
+            "Provisioned IOPS SSD (io2 Block Express / io1)",
+            "Throughput Optimized HDD (st1)",
+            "Cold HDD (sc1)"
+          ],
+          "answer": "Provisioned IOPS SSD (io2 Block Express / io1)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What type of storage does Amazon EFS provide?",
+          "options": [
+            "Scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources.",
+            "Block storage attached to a single EC2 instance.",
+            "Object storage accessible via API.",
+            "Long-term archival storage."
+          ],
+          "answer": "Scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service is specifically designed for long-term, secure, and low-cost data archiving and backup?",
+          "options": [
+            "Amazon S3 Standard",
+            "Amazon EBS",
+            "Amazon EFS",
+            "Amazon S3 Glacier (including Instant Retrieval, Flexible Retrieval, Deep Archive)"
+          ],
+          "answer": "Amazon S3 Glacier (including Instant Retrieval, Flexible Retrieval, Deep Archive)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a key difference between S3 Standard and S3 Glacier Deep Archive?",
+          "options": [
+            "S3 Standard is for block storage; Glacier is for file storage.",
+            "S3 Standard offers millisecond access; Glacier Deep Archive retrieval takes hours.",
+            "S3 Standard has lower durability.",
+            "Glacier Deep Archive is more expensive per GB stored."
+          ],
+          "answer": "S3 Standard offers millisecond access; Glacier Deep Archive retrieval takes hours."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What feature in Amazon S3 allows you to automatically move objects between different storage classes based on their age or access patterns?",
+          "options": [
+            "S3 Lifecycle policies",
+            "S3 Replication",
+            "S3 Access Points",
+            "S3 Bucket Policies"
+          ],
+          "answer": "S3 Lifecycle policies"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which S3 storage class automatically optimizes costs by moving data between frequent and infrequent access tiers based on changing access patterns?",
+          "options": [
+            "S3 Standard",
+            "S3 Intelligent-Tiering",
+            "S3 Standard-IA",
+            "S3 One Zone-IA"
+          ],
+          "answer": "S3 Intelligent-Tiering"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Can an EBS volume be attached to multiple EC2 instances simultaneously?",
+          "options": [
+            "Yes, always.",
+            "No, standard EBS volumes are attached to a single instance in a specific AZ.",
+            "Yes, but only if using EBS Multi-Attach enabled volumes (io1/io2) with compatible instances.",
+            "Only if the instances are in different Availability Zones."
+          ],
+          "answer": "Yes, but only if using EBS Multi-Attach enabled volumes (io1/io2) with compatible instances."
+        }
+      ]
+    },
+    {
+      "id": "aws-compute-1",
+      "title": "AWS Compute",
+      "description": "Covers AWS compute services such as EC2, Lambda, and Elastic Beanstalk.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon EC2?",
+          "options": [
+            "A service that provides secure, resizable compute capacity (virtual servers) in the cloud.",
+            "A managed Kubernetes service.",
+            "A serverless function execution service.",
+            "A managed relational database service."
+          ],
+          "answer": "A service that provides secure, resizable compute capacity (virtual servers) in the cloud."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an AMI (Amazon Machine Image) in the context of EC2?",
+          "options": [
+            "A template containing the software configuration (OS, application server, applications) required to launch an EC2 instance.",
+            "A type of EC2 instance family.",
+            "A network interface attached to an instance.",
+            "A security credential."
+          ],
+          "answer": "A template containing the software configuration (OS, application server, applications) required to launch an EC2 instance."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS Lambda?",
+          "options": [
+            "A serverless, event-driven compute service that lets you run code without provisioning or managing servers.",
+            "A container orchestration service.",
+            "A service for deploying web applications easily.",
+            "A block storage service."
+          ],
+          "answer": "A serverless, event-driven compute service that lets you run code without provisioning or managing servers."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which EC2 pricing model offers the largest potential savings (up to 90%) on compute costs for fault-tolerant workloads that can handle interruptions?",
+          "options": [
+            "On-Demand Instances",
+            "Reserved Instances",
+            "Spot Instances",
+            "Dedicated Hosts"
+          ],
+          "answer": "Spot Instances"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon ECS (Elastic Container Service)?",
+          "options": [
+            "A highly scalable, high-performance container orchestration service that supports Docker containers.",
+            "A managed Kubernetes service.",
+            "A serverless compute service.",
+            "A service for building container images."
+          ],
+          "answer": "A highly scalable, high-performance container orchestration service that supports Docker containers."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS Elastic Beanstalk?",
+          "options": [
+            "An easy-to-use service (PaaS) for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker.",
+            "A container registry service.",
+            "A virtual server service.",
+            "A database migration service."
+          ],
+          "answer": "An easy-to-use service (PaaS) for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary purpose of an EC2 Auto Scaling group?",
+          "options": [
+            "To automatically adjust the number of EC2 instances in response to changing demand or schedules.",
+            "To define firewall rules for instances.",
+            "To create backups of instances.",
+            "To assign static IP addresses."
+          ],
+          "answer": "To automatically adjust the number of EC2 instances in response to changing demand or schedules."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which EC2 instance family is typically optimized for memory-intensive applications like large databases or in-memory caches?",
+          "options": [
+            "General Purpose (e.g., M, T families)",
+            "Compute Optimized (e.g., C family)",
+            "Memory Optimized (e.g., R, X families)",
+            "Storage Optimized (e.g., I, D families)"
+          ],
+          "answer": "Memory Optimized (e.g., R, X families)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon EKS (Elastic Kubernetes Service)?",
+          "options": [
+            "A managed service that makes it easy to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane.",
+            "A Docker container registry.",
+            "A serverless function service.",
+            "A custom virtual machine service."
+          ],
+          "answer": "A managed service that makes it easy to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What happens to the data on the root EBS volume when an EC2 instance is terminated by default?",
+          "options": [
+            "The data is preserved, and the volume becomes detached.",
+            "The root EBS volume is deleted along with the instance.",
+            "The data is automatically backed up to S3.",
+            "The instance cannot be terminated if it has data."
+          ],
+          "answer": "The root EBS volume is deleted along with the instance."
+        }
+      ]
+    },
+    {
+      "id": "aws-networking-1",
+      "title": "AWS Networking",
+      "description": "Questions related to VPC, Route 53, and Direct Connect.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon VPC?",
+          "options": [
+            "Virtual Private Cloud - A logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.",
+            "Virtual Public Cloud - A service for hosting public websites.",
+            "Virtual Private Connection - A type of VPN.",
+            "Virtual Protocol Controller - A network management tool."
+          ],
+          "answer": "Virtual Private Cloud - A logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a subnet within an Amazon VPC?",
+          "options": [
+            "A range of IP addresses within a VPC, residing entirely within one Availability Zone.",
+            "A firewall rule set.",
+            "A routing table entry.",
+            "A virtual network interface."
+          ],
+          "answer": "A range of IP addresses within a VPC, residing entirely within one Availability Zone."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What component must be attached to a VPC to allow communication between instances in the VPC and the internet?",
+          "options": [
+            "Internet Gateway (IGW)",
+            "NAT Gateway",
+            "Virtual Private Gateway (VGW)",
+            "Security Group"
+          ],
+          "answer": "Internet Gateway (IGW)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary purpose of a NAT Gateway or NAT Instance?",
+          "options": [
+            "To enable instances in a private subnet to initiate outbound traffic to the internet or other AWS services, while preventing the internet from initiating connections with those instances.",
+            "To allow inbound internet traffic directly to instances in private subnets.",
+            "To connect a VPC to an on-premises network.",
+            "To filter traffic based on port numbers."
+          ],
+          "answer": "To enable instances in a private subnet to initiate outbound traffic to the internet or other AWS services, while preventing the internet from initiating connections with those instances."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon Route 53?",
+          "options": [
+            "A highly available and scalable cloud Domain Name System (DNS) web service.",
+            "A load balancing service.",
+            "A content delivery network (CDN).",
+            "A dedicated network connection service."
+          ],
+          "answer": "A highly available and scalable cloud Domain Name System (DNS) web service."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What AWS component acts as a virtual firewall for EC2 instances to control inbound and outbound traffic at the instance level?",
+          "options": [
+            "Security Group",
+            "Network ACL (NACL)",
+            "Internet Gateway",
+            "Route Table"
+          ],
+          "answer": "Security Group"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a key difference between Security Groups and Network ACLs (NACLs)?",
+          "options": [
+            "Security Groups are stateful (return traffic is automatically allowed), while NACLs are stateless (return traffic must be explicitly allowed).",
+            "Security Groups operate at the subnet level; NACLs operate at the instance level.",
+            "Security Groups only control inbound traffic; NACLs control inbound and outbound.",
+            "NACLs support 'allow' rules only; Security Groups support 'allow' and 'deny'."
+          ],
+          "answer": "Security Groups are stateful (return traffic is automatically allowed), while NACLs are stateless (return traffic must be explicitly allowed)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What service provides a dedicated, private physical network connection between your datacenter or office and AWS?",
+          "options": [
+            "AWS Direct Connect",
+            "AWS Site-to-Site VPN",
+            "VPC Peering",
+            "AWS Transit Gateway"
+          ],
+          "answer": "AWS Direct Connect"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What enables network connectivity between two VPCs, allowing them to communicate as if they were on the same network using private IP addresses?",
+          "options": [
+            "VPC Peering Connection",
+            "Internet Gateway",
+            "NAT Gateway",
+            "AWS Direct Connect"
+          ],
+          "answer": "VPC Peering Connection"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service acts as a central hub to simplify network connectivity and routing between multiple VPCs and on-premises networks?",
+          "options": [
+            "AWS Transit Gateway",
+            "VPC Peering",
+            "Virtual Private Gateway (VGW)",
+            "Internet Gateway (IGW)"
+          ],
+          "answer": "AWS Transit Gateway"
+        }
+      ]
+    },
+    {
+      "id": "aws-databases-1",
+      "title": "AWS Databases",
+      "description": "Examines knowledge of RDS, DynamoDB, Redshift, and Aurora.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon RDS (Relational Database Service)?",
+          "options": [
+            "A managed service that makes it easy to set up, operate, and scale a relational database in the cloud.",
+            "A fully managed NoSQL database service.",
+            "A petabyte-scale data warehousing service.",
+            "An in-memory caching service."
+          ],
+          "answer": "A managed service that makes it easy to set up, operate, and scale a relational database in the cloud."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of the following database engines is NOT directly supported by Amazon RDS?",
+          "options": [
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Microsoft SQL Server",
+            "Oracle",
+            "MariaDB",
+            "Amazon Aurora"
+          ],
+          "answer": "MongoDB"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon DynamoDB?",
+          "options": [
+            "A key-value and document NoSQL database service that delivers single-digit millisecond performance at any scale.",
+            "A managed relational database service.",
+            "A data warehousing service.",
+            "A graph database service."
+          ],
+          "answer": "A key-value and document NoSQL database service that delivers single-digit millisecond performance at any scale."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon Aurora?",
+          "options": [
+            "A MySQL and PostgreSQL-compatible relational database built for the cloud, offering high performance and availability.",
+            "A serverless NoSQL database.",
+            "An object storage service.",
+            "An in-memory cache."
+          ],
+          "answer": "A MySQL and PostgreSQL-compatible relational database built for the cloud, offering high performance and availability."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service is a fast, fully managed, petabyte-scale data warehouse service designed for analytics?",
+          "options": [
+            "Amazon Redshift",
+            "Amazon RDS",
+            "Amazon DynamoDB",
+            "Amazon ElastiCache"
+          ],
+          "answer": "Amazon Redshift"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary benefit of creating a Read Replica for an Amazon RDS database?",
+          "options": [
+            "To offload read traffic from the primary database instance, improving read performance.",
+            "To provide automatic failover in case the primary instance fails (that's Multi-AZ).",
+            "To encrypt the data at rest.",
+            "To migrate the database to a different region."
+          ],
+          "answer": "To offload read traffic from the primary database instance, improving read performance."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon ElastiCache used for?",
+          "options": [
+            "To deploy, operate, and scale an in-memory cache (like Redis or Memcached) in the cloud to improve application performance.",
+            "To manage relational databases.",
+            "To store large binary objects.",
+            "To run complex analytical queries."
+          ],
+          "answer": "To deploy, operate, and scale an in-memory cache (like Redis or Memcached) in the cloud to improve application performance."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which caching engines are supported by Amazon ElastiCache?",
+          "options": [
+            "Redis and Memcached",
+            "MySQL and PostgreSQL",
+            "DynamoDB Accelerator (DAX)",
+            "SQL Server Cache"
+          ],
+          "answer": "Redis and Memcached"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the main purpose of enabling Multi-AZ deployment for an Amazon RDS instance?",
+          "options": [
+            "To enhance availability and provide automatic failover to a synchronous standby replica in a different Availability Zone.",
+            "To improve read performance (that's Read Replicas).",
+            "To lower the cost of the database.",
+            "To allow connections from multiple VPCs."
+          ],
+          "answer": "To enhance availability and provide automatic failover to a synchronous standby replica in a different Availability Zone."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service helps you migrate databases to AWS easily and securely, supporting homogeneous and heterogeneous migrations?",
+          "options": [
+            "AWS Database Migration Service (DMS)",
+            "AWS Schema Conversion Tool (SCT)",
+            "Amazon RDS Snapshots",
+            "AWS DataSync"
+          ],
+          "answer": "AWS Database Migration Service (DMS)"
+        }
+      ]
+    },
+    {
+      "id": "aws-cloud-operations-1",
+      "title": "AWS Cloud Operations",
+      "description": "Focuses on services for monitoring, logging and managing the lifecycle.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides monitoring and observability for your AWS resources and applications, collecting metrics, logs, and events?",
+          "options": [
+            "Amazon CloudWatch",
+            "AWS CloudTrail",
+            "AWS Config",
+            "AWS Systems Manager"
+          ],
+          "answer": "Amazon CloudWatch"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What kind of data does CloudWatch primarily collect?",
+          "options": [
+            "Performance metrics (e.g., CPU Utilization, Network I/O), Logs (from various services and agents), and Events (indicating state changes).",
+            "Only API call history.",
+            "Only resource configuration changes.",
+            "Only security findings."
+          ],
+          "answer": "Performance metrics (e.g., CPU Utilization, Network I/O), Logs (from various services and agents), and Events (indicating state changes)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service records API calls made within your AWS account, providing governance, compliance, and operational auditing?",
+          "options": [
+            "AWS CloudTrail",
+            "Amazon CloudWatch Logs",
+            "AWS Config",
+            "Amazon Inspector"
+          ],
+          "answer": "AWS CloudTrail"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary function of AWS Config?",
+          "options": [
+            "To continuously monitor and record your AWS resource configurations and evaluate them against desired configurations (compliance).",
+            "To monitor application performance metrics.",
+            "To log API calls.",
+            "To automate operational tasks on instances."
+          ],
+          "answer": "To continuously monitor and record your AWS resource configurations and evaluate them against desired configurations (compliance)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides a unified user interface to view operational data from multiple AWS services and automate operational tasks across your AWS resources?",
+          "options": [
+            "AWS Systems Manager",
+            "AWS CloudFormation",
+            "Amazon CloudWatch Dashboard",
+            "AWS Control Tower"
+          ],
+          "answer": "AWS Systems Manager"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which feature of AWS Systems Manager allows you to securely connect to your EC2 instances (Linux or Windows) without needing SSH keys or bastion hosts?",
+          "options": [
+            "Session Manager",
+            "Run Command",
+            "Patch Manager",
+            "Parameter Store"
+          ],
+          "answer": "Session Manager"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which feature of AWS Systems Manager allows you to execute commands remotely on a fleet of managed instances?",
+          "options": [
+            "Run Command",
+            "Automation",
+            "State Manager",
+            "Inventory"
+          ],
+          "answer": "Run Command"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS CloudFormation?",
+          "options": [
+            "A service that provides an easy way to model a collection of related AWS and third-party resources, provision them quickly and consistently, and manage them throughout their lifecycles (Infrastructure as Code).",
+            "A configuration management service like Chef or Puppet.",
+            "A continuous integration and continuous delivery (CI/CD) service.",
+            "A monitoring and logging service."
+          ],
+          "answer": "A service that provides an easy way to model a collection of related AWS and third-party resources, provision them quickly and consistently, and manage them throughout their lifecycles (Infrastructure as Code)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What are the primary benefits of using Infrastructure as Code (IaC) tools like CloudFormation?",
+          "options": [
+            "Automation, consistency, reusability, version control, and documentation of infrastructure.",
+            "Lowering compute costs directly.",
+            "Improving network latency.",
+            "Managing user permissions."
+          ],
+          "answer": "Automation, consistency, reusability, version control, and documentation of infrastructure."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides real-time guidance to help you provision your resources following AWS best practices across cost optimization, performance, security, fault tolerance, and service limits?",
+          "options": [
+            "AWS Trusted Advisor",
+            "AWS Config Rules",
+            "Amazon Inspector",
+            "AWS Well-Architected Tool"
+          ],
+          "answer": "AWS Trusted Advisor"
+        }
+      ]
+    },
+    {
+      "id": "aws-security-1",
+      "title": "AWS Security",
+      "description": "Covers security services and features like IAM, and KMS.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS IAM (Identity and Access Management)?",
+          "options": [
+            "A web service that helps you securely control access to AWS resources by managing users, groups, roles, and permissions.",
+            "A service for managing encryption keys.",
+            "A managed firewall service.",
+            "A threat detection service."
+          ],
+          "answer": "A web service that helps you securely control access to AWS resources by managing users, groups, roles, and permissions."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "In IAM, what is a 'user'?",
+          "options": [
+            "An entity (representing a person or application) that interacts with AWS.",
+            "A collection of permissions.",
+            "An AWS resource like an EC2 instance.",
+            "A temporary security credential."
+          ],
+          "answer": "An entity (representing a person or application) that interacts with AWS."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an IAM 'role' primarily used for?",
+          "options": [
+            "To grant permissions to AWS services or users from federated identity providers, allowing them to assume the role and access resources temporarily without long-term credentials.",
+            "To define a group of users.",
+            "To specify which resources a user can access.",
+            "To manage billing information."
+          ],
+          "answer": "To grant permissions to AWS services or users from federated identity providers, allowing them to assume the role and access resources temporarily without long-term credentials."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is an IAM 'policy'?",
+          "options": [
+            "A JSON document that formally defines permissions (allow/deny actions on specific resources).",
+            "A user account.",
+            "A group of IAM users.",
+            "An assumed role."
+          ],
+          "answer": "A JSON document that formally defines permissions (allow/deny actions on specific resources)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the best practice for the AWS account root user?",
+          "options": [
+            "Enable Multi-Factor Authentication (MFA) and use it only for tasks that absolutely require root access.",
+            "Use the root user for all daily administrative tasks.",
+            "Share the root user credentials with the entire team.",
+            "Delete the root user account."
+          ],
+          "answer": "Enable Multi-Factor Authentication (MFA) and use it only for tasks that absolutely require root access."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS KMS (Key Management Service)?",
+          "options": [
+            "A managed service that makes it easy to create and control the encryption keys used to encrypt your data.",
+            "A service for managing IAM user passwords.",
+            "A firewall rule management service.",
+            "A service for storing secrets like database credentials."
+          ],
+          "answer": "A managed service that makes it easy to create and control the encryption keys used to encrypt your data."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What does AWS Shield provide?",
+          "options": [
+            "Managed Distributed Denial of Service (DDoS) protection for applications running on AWS.",
+            "Web Application Firewall (WAF) capabilities.",
+            "Vulnerability scanning for EC2 instances.",
+            "Encryption key management."
+          ],
+          "answer": "Managed Distributed Denial of Service (DDoS) protection for applications running on AWS."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is AWS WAF (Web Application Firewall)?",
+          "options": [
+            "A web application firewall that helps protect your web applications or APIs against common web exploits (like SQL injection or cross-site scripting).",
+            "A network firewall operating at the subnet level (NACL).",
+            "A DDoS mitigation service.",
+            "A service for managing SSL/TLS certificates."
+          ],
+          "answer": "A web application firewall that helps protect your web applications or APIs against common web exploits (like SQL injection or cross-site scripting)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides intelligent threat detection by continuously monitoring for malicious activity and unauthorized behavior?",
+          "options": [
+            "Amazon GuardDuty",
+            "Amazon Inspector",
+            "AWS Security Hub",
+            "AWS Shield"
+          ],
+          "answer": "Amazon GuardDuty"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the primary purpose of AWS Secrets Manager?",
+          "options": [
+            "To help you protect secrets needed to access your applications, services, and IT resources, enabling easy rotation, management, and retrieval.",
+            "To manage encryption keys (KMS).",
+            "To store IAM user credentials.",
+            "To manage SSL/TLS certificates (ACM)."
+          ],
+          "answer": "To help you protect secrets needed to access your applications, services, and IT resources, enabling easy rotation, management, and retrieval."
+        }
+      ]
+    },
+    {
+      "id": "aws-serverless-1",
+      "title": "AWS Serverless",
+      "description": "Tests understanding of serverless technologies like Lambda and API Gateway.",
+      "difficulty": "medium",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which term best describes an architectural style where developers focus on building and running applications without managing the underlying servers?",
+          "options": [
+            "Serverless",
+            "Containerized",
+            "Monolithic",
+            "Virtual Machine Based"
+          ],
+          "answer": "Serverless"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service is the core function-as-a-service (FaaS) offering, allowing you to run code in response to events?",
+          "options": [
+            "AWS Lambda",
+            "Amazon EC2",
+            "Amazon ECS",
+            "AWS Elastic Beanstalk"
+          ],
+          "answer": "AWS Lambda"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is Amazon API Gateway?",
+          "options": [
+            "A fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.",
+            "A load balancer for distributing traffic.",
+            "A DNS service.",
+            "A message queuing service."
+          ],
+          "answer": "A fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "How are AWS Lambda functions typically triggered in a serverless API built with API Gateway?",
+          "options": [
+            "API Gateway receives an HTTP request and invokes the configured Lambda function to process it.",
+            "Lambda polls API Gateway for new requests.",
+            "A CloudWatch Event triggers Lambda, which then calls API Gateway.",
+            "EC2 instances trigger Lambda functions directly."
+          ],
+          "answer": "API Gateway receives an HTTP request and invokes the configured Lambda function to process it."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service allows you to coordinate multiple AWS services into serverless workflows using visual state machines?",
+          "options": [
+            "AWS Step Functions",
+            "AWS Lambda Layers",
+            "AWS CodePipeline",
+            "AWS Systems Manager Automation"
+          ],
+          "answer": "AWS Step Functions"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a 'state machine' in AWS Step Functions?",
+          "options": [
+            "A definition of a workflow, composed of states (tasks, choices, waits, parallel executions) and transitions between them.",
+            "A specific version of a Lambda function.",
+            "A configuration file for API Gateway.",
+            "A type of NoSQL database."
+          ],
+          "answer": "A definition of a workflow, composed of states (tasks, choices, waits, parallel executions) and transitions between them."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides a fully managed publish/subscribe (pub/sub) messaging service for decoupling microservices, distributed systems, and serverless applications?",
+          "options": [
+            "Amazon SNS (Simple Notification Service)",
+            "Amazon SQS (Simple Queue Service)",
+            "Amazon MQ",
+            "AWS Kinesis"
+          ],
+          "answer": "Amazon SNS (Simple Notification Service)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which AWS service provides a fully managed message queuing service for decoupling and scaling microservices, distributed systems, and serverless applications?",
+          "options": [
+            "Amazon SQS (Simple Queue Service)",
+            "Amazon SNS (Simple Notification Service)",
+            "AWS Step Functions",
+            "Amazon Kinesis Data Streams"
+          ],
+          "answer": "Amazon SQS (Simple Queue Service)"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is a primary benefit of using serverless architecture like AWS Lambda?",
+          "options": [
+            "Pay only for the compute time consumed (cost efficiency) and automatic scaling.",
+            "Full control over the underlying operating system.",
+            "Predictable, fixed monthly costs.",
+            "Ideal for long-running, stateful processing tasks."
+          ],
+          "answer": "Pay only for the compute time consumed (cost efficiency) and automatic scaling."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which serverless database service is often paired with AWS Lambda for building scalable applications?",
+          "options": [
+            "Amazon DynamoDB",
+            "Amazon RDS",
+            "Amazon Redshift",
+            "Amazon ElastiCache"
+          ],
+          "answer": "Amazon DynamoDB"
+        }
+      ]
+    }
+  ]
+}

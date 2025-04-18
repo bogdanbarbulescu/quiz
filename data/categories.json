@@ -1,0 +1,26 @@
+[
+    {
+      "topic": "networking",
+      "title": "Networking",
+      "description": "Explore various networking concepts and protocols.",
+      "imageUrl": "https://cdn.pixabay.com/photo/2024/04/17/16/39/ai-generated-8702466_1280.jpg"
+    },
+    {
+      "topic": "openstack",
+      "title": "OpenStack",
+      "description": "Dive deep into the components of the OpenStack cloud.",
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogs-images.forbes.com%2Fpatrickmoorhead%2Ffiles%2F2014%2F05%2Fopenstack-logo.jpg&f=1&nofb=1&ipt=c265d3a73f2169b8a55aae2a9771d3d0f02369a7103c716cdc323f21707c1ff3&ipo=images"
+    },
+    {
+      "topic": "security",
+      "title": "Security",
+      "description": "Challenge yourself with fundamental security principles.",
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.theforage.com%2Fblog%2Fwp-content%2Fuploads%2F2022%2F12%2Fwhat-is-cybersecurity.jpg&f=1&nofb=1&ipt=d0c26caac6ebc96b5217464f284310120bc9c72bdb91a4ea9c001bb9b57f856d&ipo=images"
+    },
+    {
+      "topic": "aws",
+      "title": "AWS",
+      "description": "Test your knowledge on Amazon Web Services.",
+      "imageUrl": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"
+    }
+  ]

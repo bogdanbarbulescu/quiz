@@ -1,80 +1,107 @@
-// quiz-list-script.js
+// quiz-list-script.js (Adds Search Functionality)
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- DOM Elements ---
     const quizListContainer = document.getElementById('quiz-list');
     const categoryTitle = document.getElementById('categoryTitle');
     const categoryDescription = document.getElementById('categoryDescription');
+    const loadingIndicator = document.getElementById('loading-indicator');
+    const errorMessage = document.getElementById('error-message');
+    const controlsWrapper = document.querySelector('.controls-wrapper'); // Get the new wrapper
+    const difficultyFilterButtons = document.getElementById('difficulty-filter');
+    const searchInput = document.getElementById('quiz-search-input');
+    const noResultsMessage = document.getElementById('no-results-message');
 
-    // Get the category from the URL query parameter.
+    // --- Get Category from URL ---
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
 
-    // Define the quizzes for each category.  This is your quiz data.
-    const quizzes = {
-        networking: [
-            { id: 'networking-1', title: 'CCNA Basics', description: 'Test your basic CCNA knowledge.' },
-            { id: 'networking-2', title: 'Subnetting', description: 'Practice subnetting questions.' },
-        ],
-        openstack: [
-            { id: 'openstack-1', title: 'OpenStack Fundamentals', description: 'Covers core OpenStack concepts.' },
-            { id: 'openstack-2', title: 'Nova - Compute', description: 'Focuses on OpenStack compute.' },
-            { id: 'openstack-3', title: 'Neutron - Networking', description: 'Focuses on OpenStack networking.' },
-            { id: 'openstack-4', title: 'Cinder - Block Storage', description: 'Focuses on OpenStack block storage.' },
-            { id: 'openstack-5', title: 'Swift - Object Storage', description: 'Focuses on OpenStack object storage.' },
-            { id: 'openstack-6', title: 'Keystone - Identity Service', description: 'Focuses on OpenStack identity service.' },
-            { id: 'openstack-7', title: 'Glance - Image Service', description: 'Focuses on OpenStack image service.' },
-            { id: 'openstack-8', title: 'Horizon - Dashboard', description: 'Focuses on OpenStack dashboard.' },
-            { id: 'openstack-8', title: 'Heat - Orchestration', description: 'Focuses on OpenStack orchestration.' },
-        ],
-        security: [
-            { id: 'security-1', title: 'Basic Security Concepts', description: 'Test your knowledge of fundamental security principles.' },
-            { id: 'security-2', title: 'Firewall Rules', description: 'Practice configuring firewall rules.' },
-        ],
-        aws: [
-            { id: 'aws-storage-1', title: 'AWS Storage', description: 'Focuses on AWS storage services like S3, EBS, EFS, and Glacier.' },
-            { id: 'aws-compute-1', title: 'AWS Compute', description: 'Covers AWS compute services such as EC2, Lambda, and Elastic Beanstalk.' },
-            { id: 'aws-networking-1', title: 'AWS Networking', description: 'Questions related to VPC, Route 53, and Direct Connect.' },
-            { id: 'aws-databases-1', title: 'AWS Databases', description: 'Examines knowledge of RDS, DynamoDB, Redshift, and Aurora.' },
-            { id: 'aws-cloud-operations-1', title: 'AWS Cloud Operations', description: 'Focuses on services for monitoring, logging and managing the lifecycle.' },
-            { id: 'aws-security-1', title: 'AWS Security', description: 'Covers security services and features like IAM, and KMS.' },
-            { id: 'aws-serverless-1', title: 'AWS Serverless', description: 'Tests understanding of serverless technologies like Lambda and API Gateway.' },
-        ],
-    };
+    // --- State ---
+    let currentCategoryQuizzes = []; // Store the fetched quizzes
+    let currentDifficultyFilter = 'all';
+    let currentSearchTerm = '';
+    let debounceTimer;
 
-    // Display the category title and description.
-    if (category) {
-        switch (category) {
-            case 'networking':
-                categoryTitle.textContent = 'Networking Quizzes';
-                categoryDescription.textContent = 'Select a networking quiz to begin.';
-                break;
-            case 'openstack':
-                categoryTitle.textContent = 'OpenStack Quizzes';
-                categoryDescription.textContent = 'Choose an OpenStack quiz.';
-                break;
-            case 'security':
-                categoryTitle.textContent = 'Security Quizzes';
-                categoryDescription.textContent = 'Select a security quiz.';
-                break;
-            case 'aws':
-                categoryTitle.textContent = 'AWS Quizzes';
-                categoryDescription.textContent = 'Select an AWS quiz to begin.';
-                break;
-            default:
-                categoryTitle.textContent = 'Invalid Category';
-                categoryDescription.textContent = 'Please select a valid category from the main page.';
-        }
-    } else {
-        categoryTitle.textContent = 'No Category Selected';
-        categoryDescription.textContent = 'Please return to the main page and select a category.';
+    // --- Debounce Function ---
+    function debounce(func, delay) {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(func, delay);
     }
 
+    // --- Capitalize Helper ---
+    function capitalizeFirstLetter(string) {
+        if (!string) return '';
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
-    // Create the quiz list cards.
+    // --- Fetch and Display Quizzes ---
+    async function loadQuizzesForCategory(categoryName) {
+         // ... (error handling for no categoryName as before) ...
+        if (!categoryName) {
+             categoryTitle.textContent = 'No Category Selected';
+             categoryDescription.textContent = 'Please return to the main page and select a category.';
+             loadingIndicator.style.display = 'none';
+             errorMessage.textContent = 'No category specified in the URL.';
+             errorMessage.classList.remove('d-none');
+             return;
+        }
+
+        try {
+            const response = await fetch('data/quizzes.json');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const allQuizzesData = await response.json();
+
+            if (!allQuizzesData?.[categoryName]) throw new Error(`Category '${categoryName}' not found.`);
+
+            currentCategoryQuizzes = allQuizzesData[categoryName];
+
+            // --- Update Title and Description ---
+            categoryTitle.textContent = `${capitalizeFirstLetter(categoryName)} Quizzes`;
+            categoryDescription.textContent = `Select a ${categoryName.toLowerCase()} quiz below, search, or filter by difficulty.`; // Updated text
+
+            // --- Initial Display ---
+            loadingIndicator.style.display = 'none';
+            errorMessage.classList.add('d-none');
+
+            if (currentCategoryQuizzes.length > 0) {
+                controlsWrapper.style.display = 'block'; // Show controls
+                applyFiltersAndDisplay(); // Apply initial filters (all/empty search)
+                quizListContainer.style.display = 'block'; // Show list container
+                setupFilterListeners();
+                setupSearchListener();
+            } else {
+                // ... (handling for no quizzes in category as before) ...
+                const infoMessage = document.createElement('p');
+                infoMessage.textContent = "No quizzes currently available for this category.";
+                infoMessage.classList.add('text-info', 'text-center', 'mt-4');
+                quizListContainer.innerHTML = ''; // Clear just in case
+                quizListContainer.appendChild(infoMessage);
+                quizListContainer.style.display = 'block';
+                controlsWrapper.style.display = 'none'; // Hide controls if no quizzes
+            }
+
+        } catch (error) {
+            // ... (error handling as before) ...
+             console.error(`Error loading quizzes for category ${categoryName}:`, error);
+             loadingIndicator.style.display = 'none';
+             categoryTitle.textContent = 'Error Loading Quizzes';
+             categoryDescription.textContent = `Could not fetch quizzes for the '${categoryName}' category.`;
+             errorMessage.textContent = `Failed to load quizzes. ${error.message}`;
+             errorMessage.classList.remove('d-none');
+             quizListContainer.style.display = 'none';
+             controlsWrapper.style.display = 'none';
+        }
+    }
+
+    // --- Create Quiz List Card (No changes needed) ---
     function createQuizListCard(quiz) {
+         // ... (same function as in Step 1 & 2) ...
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('quiz-list-card');
-        cardDiv.onclick = () => startQuiz(quiz.id); //  Go to the actual quiz
+        cardDiv.onclick = () => startQuiz(quiz.id);
+        cardDiv.style.cursor = 'pointer';
+
+        cardDiv.dataset.difficulty = quiz.difficulty || 'unknown';
 
         const title = document.createElement('h3');
         title.classList.add('quiz-list-title');
@@ -84,29 +111,86 @@ document.addEventListener('DOMContentLoaded', () => {
         description.classList.add('quiz-list-description');
         description.textContent = quiz.description;
 
+        const difficultyBadge = document.createElement('span');
+        difficultyBadge.classList.add('badge', 'float-end');
+        const difficultyText = quiz.difficulty ? capitalizeFirstLetter(quiz.difficulty) : 'N/A';
+        difficultyBadge.textContent = difficultyText;
+
+        switch (quiz.difficulty) {
+            case 'easy': difficultyBadge.classList.add('bg-success'); break;
+            case 'medium': difficultyBadge.classList.add('bg-warning', 'text-dark'); break;
+            case 'hard': difficultyBadge.classList.add('bg-danger'); break;
+            default: difficultyBadge.classList.add('bg-secondary');
+        }
+
+        cardDiv.appendChild(difficultyBadge);
         cardDiv.appendChild(title);
         cardDiv.appendChild(description);
+
         return cardDiv;
     }
 
+     // --- Apply All Filters and Update Display ---
+    function applyFiltersAndDisplay() {
+        quizListContainer.innerHTML = ''; // Clear previous cards
+        noResultsMessage.classList.add('d-none'); // Hide no results message
+        let resultsFound = false;
+        const searchTermLower = currentSearchTerm.toLowerCase();
 
-    // Display the quizzes for the selected category.
-    if (category && quizzes[category]) {
-        quizzes[category].forEach(quiz => {
-            quizListContainer.appendChild(createQuizListCard(quiz));
+        currentCategoryQuizzes.forEach(quiz => {
+            const quizDifficulty = quiz.difficulty || 'unknown';
+            const titleLower = quiz.title.toLowerCase();
+            const descriptionLower = quiz.description.toLowerCase();
+
+            // Check difficulty filter
+            const difficultyMatch = currentDifficultyFilter === 'all' || quizDifficulty === currentDifficultyFilter;
+
+            // Check search term
+            const searchMatch = searchTermLower === '' || titleLower.includes(searchTermLower) || descriptionLower.includes(searchTermLower);
+
+            // Show card only if BOTH filters match
+            if (difficultyMatch && searchMatch) {
+                 quizListContainer.appendChild(createQuizListCard(quiz));
+                 resultsFound = true;
+            }
         });
-    } else {
-      const errorMessage = document.createElement('p');
-      errorMessage.textContent = "No quizzes available for this category.";
-      errorMessage.classList.add('text-danger')
-      quizListContainer.appendChild(errorMessage)
+
+        // Show message if no results match the combined filters
+        if (!resultsFound) {
+            noResultsMessage.classList.remove('d-none');
+        }
+    }
+
+    // --- Setup Difficulty Filter Button Listeners ---
+    function setupFilterListeners() {
+        const buttons = difficultyFilterButtons.querySelectorAll('.btn-filter');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentDifficultyFilter = button.dataset.filter; // Update state
+                applyFiltersAndDisplay(); // Re-apply filters
+            });
+        });
+    }
+
+    // --- Setup Search Input Listener ---
+    function setupSearchListener() {
+        searchInput.addEventListener('input', () => {
+            debounce(() => {
+                currentSearchTerm = searchInput.value.trim(); // Update state
+                applyFiltersAndDisplay(); // Re-apply filters
+            }, 300); // Wait 300ms after last keystroke
+        });
     }
 
 
-    // Function to navigate to the actual quiz page (you'd create separate HTML files for each quiz).
+    // --- Navigate to Quiz Page ---
     function startQuiz(quizId) {
-        // window.location.href = `${quizId}.html`; // Example: networking-1.html, openstack-2.html
-        // Or, if you want to use a single quiz.html and pass the quiz ID:
-        window.location.href = `quiz.html?quizId=${quizId}`; // CORRECTED LINE
+        window.location.href = `quiz.html?quizId=${quizId}`;
     }
+
+    // --- Initial Load ---
+    loadQuizzesForCategory(category);
+
 });

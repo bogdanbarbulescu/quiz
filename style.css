@@ -53,6 +53,17 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 1.1rem;
 }
 
+/* Loading Indicator Style */
+#loading-indicator {
+    color: #ccc; /* Light grey text for loading message */
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #00b894 !important; /* Use theme color for spinner */
+}
+
+
 /* Quiz Category Card Styles (index.html) */
 .quiz-card {
   background-color: #1e1e1e; /* Darker card background */
@@ -63,11 +74,14 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  cursor: pointer;
+  /* cursor: pointer; REMOVED - added inline */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transform */
   overflow: hidden; /* Ensure content respects border-radius */
-  height: 100%; /* Make cards in a row equal height */
+  /* height: 100%; REMOVED - Use d-flex on col-div instead */
 }
+/* Add d-flex to the column div in script.js to make cards equal height */
+/* .col-lg-3 { display: flex; } */
+
 
 .quiz-card:hover {
   transform: translateY(-5px); /* Lift effect */
@@ -98,8 +112,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   justify-content: space-between; /* Pushes content/description apart */
 }
-
-.quiz-content h2 {
+.quiz-content h3 { /* Updated selector for category card title */
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -107,7 +120,7 @@ h1, h2, h3, h4, h5, h6, p {
   transition: color 0.2s ease;
 }
 
-.quiz-card:hover .quiz-content h2 {
+.quiz-card:hover .quiz-content h3 {
   color: #00b894; /* Green on hover */
 }
 
@@ -124,9 +137,10 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 8px;
   padding: 1.25rem; /* More padding */
   margin-bottom: 1rem; /* More space */
-  cursor: pointer;
+  /* cursor: pointer; REMOVED - Added inline */
   transition: background-color 0.2s ease, box-shadow 0.3s ease, border-left 0.3s ease;
   border-left: 5px solid transparent; /* For hover effect */
+  position: relative; /* Needed for absolute positioning of badge */
 }
 
 .quiz-list-card:hover {
@@ -141,12 +155,23 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 1.1rem;
   margin-bottom: 0.3rem; /* Less space below title */
   transition: color 0.2s ease;
+  padding-right: 70px; /* Make space for badge */
 }
 
 .quiz-list-description {
   color: #a0a0a0;
   font-size: 0.9rem; /* Smaller description */
+   padding-right: 70px; /* Make space for badge */
 }
+
+.quiz-list-card .badge {
+    position: absolute; /* Position badge relative to card */
+    top: 1.25rem; /* Align with padding */
+    right: 1.25rem; /* Align with padding */
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+}
+
 
 .quiz-list-card:hover .quiz-list-title {
   color: #00b894;
@@ -207,6 +232,7 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
   vertical-align: middle; /* Align with text */
   position: relative; /* For inner circle */
+  flex-shrink: 0; /* Prevent radio button from shrinking */
 }
 
 .form-check-input:checked {
@@ -234,6 +260,7 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
   flex-grow: 1; /* Allow label to take space */
    transition: color 0.2s ease;
+   line-height: 1.4; /* Improve text wrapping */
 }
 
 .form-check-input:checked + .form-check-label {
@@ -273,6 +300,7 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 1rem;
     border-radius: 5px;
     border-left: 3px solid #dc3545; /* Red border for incorrect */
+    text-align: left; /* Align text left in answers */
 }
 
 /* Congratulations Animation */
@@ -305,27 +333,27 @@ h1, h2, h3, h4, h5, h6, p {
 .btn i {
     margin-right: 5px; /* Space between icon and text */
 }
-.btn:hover {
+.btn:hover:not(:disabled) { /* Apply hover only if not disabled */
     transform: translateY(-2px); /* Slight lift on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .btn:disabled {
-    opacity: 0.5;
+    opacity: 0.65; /* Use standard bootstrap disabled opacity */
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
 .btn-secondary { background-color: #6c757d; color: #fff; }
-.btn-secondary:hover { background-color: #5a6268; }
+.btn-secondary:hover:not(:disabled) { background-color: #5a6268; }
 .btn-primary { background-color: #0d6efd; color: #fff; } /* Use Bootstrap blue */
-.btn-primary:hover { background-color: #0b5ed7; }
+.btn-primary:hover:not(:disabled) { background-color: #0b5ed7; }
 .btn-success { background-color: #198754; color: #fff; } /* Use Bootstrap green */
-.btn-success:hover { background-color: #157347; }
+.btn-success:hover:not(:disabled) { background-color: #157347; }
 .btn-warning { background-color: #ffc107; color: #000; }
-.btn-warning:hover { background-color: #ffca2c; }
+.btn-warning:hover:not(:disabled) { background-color: #ffca2c; }
 .btn-info { background-color: #0dcaf0; color: #000; }
-.btn-info:hover { background-color: #31d2f2; }
+.btn-info:hover:not(:disabled) { background-color: #31d2f2; }
 
 /* Footer Styles */
 footer {
@@ -442,6 +470,98 @@ footer p {
     font-size: 0.85rem;
     color: #a0a0a0 !important;
     font-style: italic;
+}
+
+/* style.css (Additions for Step 2) */
+
+/* Difficulty Filter Buttons */
+.difficulty-filter-buttons .btn-group {
+  /* Optional: Add some margin around the group if needed */
+  /* margin-bottom: 1rem; */
+}
+
+.btn-filter {
+  background-color: #3a3a3a; /* Dark background */
+  color: #ccc; /* Light text */
+  border: 1px solid #555; /* Subtle border */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover state for filter buttons */
+.btn-filter:hover {
+  background-color: #4a4a4a;
+  color: #fff;
+  border-color: #666;
+}
+
+/* Active state for filter buttons */
+.btn-filter.active {
+  background-color: #00b894; /* Theme color */
+  color: #fff; /* White text */
+  border-color: #00a383; /* Slightly darker border */
+  font-weight: 600;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inner shadow */
+}
+
+/* Ensure Bootstrap button focus outline doesn't clash */
+.btn-filter:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 184, 148, 0.3); /* Subtle focus ring in theme color */
+}
+
+/* Style for the 'no results' message */
+#no-results-message {
+  /* Customize as needed, e.g., add padding */
+  padding: 1rem;
+}
+
+/* style.css (Additions for Step 3) */
+
+/* Wrapper for Search and Filter Controls */
+.controls-wrapper {
+  /* Optional: Add padding or margins if needed */
+  /* background-color: #252525; */ /* Optional subtle background */
+  /* padding: 1rem; */
+  /* border-radius: 8px; */
+}
+
+/* Search Input Styling */
+.search-container {
+  max-width: 500px; /* Limit width */
+  margin-left: auto;
+  margin-right: auto; /* Center the container */
+}
+
+.search-input {
+  background-color: #3a3a3a; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  border: 1px solid #555; /* Subtle border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 0.5rem 1rem 0.5rem 2.5rem; /* Add padding for icon */
+  font-size: 0.95rem;
+  background-image: none; /* Remove default Bootstrap search icon if any */
+  /* Font Awesome icon handled by placeholder style in HTML */
+}
+
+.search-input::placeholder {
+  color: #888; /* Lighter placeholder text */
+  font-style: italic;
+}
+
+.search-input:focus {
+  background-color: #4a4a4a;
+  color: #fff;
+  border-color: #00b894; /* Highlight border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 184, 148, 0.3); /* Theme focus ring */
+  outline: none;
+}
+
+/* Clear default browser search cancel button if needed */
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-decoration {
+-webkit-appearance: none;
+appearance: none;
 }
 
 
