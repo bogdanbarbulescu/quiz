@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8E2BLMDT3L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8E2BLMDT3L');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Port Flashcards</title>
+
+    <!-- Bootstrap CSS (Optional, but good for consistency) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS (Includes flashcard styles) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-dark"> <!-- Flex column for footer -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"> <!-- Link back to index.html -->
+                <i class="fas fa-brain"></i> QuizMaster
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#quiz-container">Quizzes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="flashcards.html">Flashcards</a></li> <!-- Active link -->
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5 flex-grow-1">
+        <div class="app-container text-center">
+             <h1 class="text-light mb-4">Networking Port Flashcards</h1>
+             <p class="text-secondary mb-4">Click or tap on a card to flip it.</p>
+
+            <div class="flashcard-area">
+
+                <!-- Card 1: FTP -->
+                <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>FTP (Control)</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">File Transfer Protocol<br>(Control commands)</p>
+                            <p class="port-number">Port: 21</p>
+                            <p class="port-details">(Data: Port 20)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: SSH -->
+                <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>SSH</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Secure Shell<br>(Remote login, SFTP, forwarding)</p>
+                            <p class="port-number">Port: 22</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Telnet -->
+                <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>Telnet</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Remote Login<br>(Unencrypted)</p>
+                            <p class="port-number">Port: 23</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: SMTP -->
+                <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                       <div class="flashcard-front">
+                            <p>SMTP</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Simple Mail Transfer Protocol<br>(Sending Email)</p>
+                            <p class="port-number">Port: 25</p>
+                        </div>
+                    </div>
+               </div>
+
+               <!-- Card 5: DNS -->
+               <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                       <div class="flashcard-front">
+                            <p>DNS</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Domain Name System<br>(Name to IP resolution)</p>
+                            <p class="port-number">Port: 53</p>
+                             <p class="port-details">(UDP/TCP)</p>
+                        </div>
+                    </div>
+               </div>
+
+               <!-- Card 6: HTTP -->
+               <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                       <div class="flashcard-front">
+                            <p>HTTP</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Hypertext Transfer Protocol<br>(Web Browsing - Unencrypted)</p>
+                            <p class="port-number">Port: 80</p>
+                        </div>
+                    </div>
+               </div>
+
+               <!-- Card 7: HTTPS -->
+               <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                     <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                             <p>HTTPS</p>
+                         </div>
+                         <div class="flashcard-back">
+                             <p class="explanation">HTTP Secure<br>(Web Browsing - Encrypted)</p>
+                             <p class="port-number">Port: 443</p>
+                         </div>
+                     </div>
+                </div>
+
+                 <!-- Card 8: POP3 -->
+                 <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>POP3</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Post Office Protocol v3<br>(Receiving Email)</p>
+                            <p class="port-number">Port: 110</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Card 9: IMAP -->
+                 <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>IMAP</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Internet Message Access Protocol<br>(Receiving Email - Synced)</p>
+                            <p class="port-number">Port: 143</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Card 10: RDP -->
+                 <div class="flashcard" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <p>RDP</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <p class="explanation">Remote Desktop Protocol<br>(Windows Remote Desktop)</p>
+                            <p class="port-number">Port: 3389</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards here -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-auto bg-dark text-light"> <!-- Use mt-auto -->
+        <p>© 2025 QuizMaster. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS for Flashcards -->
+    <script src="flashcards-script.js"></script>
+</body>
+
+</html>

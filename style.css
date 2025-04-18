@@ -1,285 +1,476 @@
-/* style.css (Existing File - Updated) */
+/* style.css (Unified) */
 
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
   background-color: #121212; /* Dark background */
-  color: #fff; /* Light text */
+  color: #e0e0e0; /* Lighter default text */
+  display: flex; /* Needed for footer push */
+  flex-direction: column; /* Needed for footer push */
+  min-height: 100vh; /* Needed for footer push */
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px; /* Slightly wider container */
 }
 
-h1,
-p {
-  color: #fff;
-  /* Ensure text is light */
+/* Make sure headings and paragraphs inherit body color or set explicitly if needed */
+h1, h2, h3, h4, h5, h6, p {
+  color: inherit;
 }
 
+/* Navbar Enhancements */
+.navbar {
+  margin-bottom: 1rem; /* Add some space below navbar */
+}
+.navbar-brand {
+    color: #00b894 !important; /* Brand color */
+}
+.navbar-brand i {
+    margin-right: 5px;
+}
+.nav-link {
+    transition: color 0.2s ease-in-out;
+}
+.nav-link:hover, .nav-link.active {
+    color: #00b894 !important; /* Highlight color */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252_1280.jpg') no-repeat center center; /* Example background */
+    background-size: cover;
+    color: #fff;
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    padding: 4rem 1rem;
+}
+.hero h1 {
+    color: #fff;
+    font-weight: 700; /* Bolder heading */
+}
+.hero p {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+}
+
+/* Quiz Category Card Styles (index.html) */
 .quiz-card {
-  background-color: #222;
-  /* Darker card background */
-  border: 1px solid #333;
-  /* Subtle border */
-  border-radius: 8px;
-  /* Rounded corners */
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  background-color: #1e1e1e; /* Darker card background */
+  border: 1px solid #333;  /* Subtle border */
+  border-radius: 10px;     /* Rounded corners */
+  padding: 0; /* Remove padding, handled by image/content */
+  margin-bottom: 1.5rem; /* Increased margin */
   display: flex;
   flex-direction: column;
-  /* Stack elements vertically */
-  align-items: center;
-  /* Center items horizontally */
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transform */
+  overflow: hidden; /* Ensure content respects border-radius */
+  height: 100%; /* Make cards in a row equal height */
 }
 
 .quiz-card:hover {
-  background-color: #333;
-  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5);
-  /* Green glow */
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 15px rgba(0, 184, 148, 0.2); /* Enhanced glow */
 }
 
 .quiz-image {
-  width: 150px;
-  /* Or whatever size you want */
-  height: 150px;
-  margin-bottom: 1rem;
-  /* Space between image and text */
-  border-radius: 8px;
-  /* Match card radius */
+  width: 100%;
+  height: 180px; /* Fixed height for consistency */
   overflow: hidden;
-  /* Clip image to rounded corners */
 }
 
 .quiz-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Cover the area, maintaining aspect ratio */
+  transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.quiz-card:hover .quiz-image img {
+    transform: scale(1.05); /* Zoom effect */
 }
 
 .quiz-content {
+  padding: 1.5rem;
   flex-grow: 1;
-  /* Allow content to fill remaining space */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* Vertically center text */
+  justify-content: space-between; /* Pushes content/description apart */
 }
 
 .quiz-content h2 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
   color: #fff;
   transition: color 0.2s ease;
 }
 
 .quiz-card:hover .quiz-content h2 {
-  color: #00b894;
-  /* Green on hover */
+  color: #00b894; /* Green on hover */
 }
 
 .quiz-content p {
-  font-size: 1rem;
-  color: #ccc;
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.5;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-  /* No specific changes needed here, Bootstrap's grid handles responsiveness */
-  .quiz-card {
-      margin-bottom: 1rem;
-      /* Add some margin between cards on smaller screens */
-  }
-}
-
-/* Styles for the quiz list (quiz-list.html) */
+/* Quiz List Card Styles (quiz-list.html) */
 .quiz-list-card {
-  background-color: #333; /* Slightly lighter than main cards */
+  background-color: #2a2a2a; /* Slightly lighter */
   border: 1px solid #444;
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
+  padding: 1.25rem; /* More padding */
+  margin-bottom: 1rem; /* More space */
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+  border-left: 5px solid transparent; /* For hover effect */
 }
 
 .quiz-list-card:hover {
-  background-color: #444;
-  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5);
+  background-color: #333;
+  box-shadow: 0 5px 10px rgba(0, 184, 148, 0.15);
+  border-left: 5px solid #00b894; /* Accent border */
 }
 
 .quiz-list-title {
-  color: #fff;
-  font-weight: bold;
+  color: #e0e0e0;
+  font-weight: 600; /* Bolder */
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem; /* Less space below title */
+  transition: color 0.2s ease;
 }
 
 .quiz-list-description {
-  color: #ccc;
+  color: #a0a0a0;
+  font-size: 0.9rem; /* Smaller description */
 }
 
-.quiz-list-card:hover .quiz-list-title{
-color: #00b894;
+.quiz-list-card:hover .quiz-list-title {
+  color: #00b894;
 }
 
-/* Styles for the quiz itself (quiz.html) */
-/* IMPORTANT:  These styles now fully match the main card design */
+/* Quiz Page Styles (quiz.html) */
 .quiz-card-inner {
-  background-color: #222; /* Dark background - MATCHES main card */
-  border: 1px solid #333; /* Subtle border - MATCHES main card */
-  border-radius: 8px; /* Rounded corners - MATCHES main card */
-  padding: 1.5rem; /* Padding - MATCHES main card */
-  color: #fff;
-  /*transition: background-color 0.2s ease, box-shadow 0.3s ease;  Removed to avoid double hover */
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 2rem; /* More padding */
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/*  Apply hover effect to the ENTIRE inner card */
-.quiz-card-inner:hover {
- 
-  box-shadow: 0 0 10px 2px rgba(0, 184, 148, 0.5); /* Green glow */
+.quiz-card-inner .card-title {
+    color: #00b894; /* Title color */
+    font-weight: 600;
 }
-
 
 .question {
   color: #fff;
-  font-size: 1.1rem; /* Slightly larger font */
-  margin-bottom: 1rem; /* More space below the question */
+  font-size: 1.2rem; /* Larger question font */
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.options {
+    margin-bottom: 1.5rem; /* Space below options */
 }
 
 .option {
-  color: #ccc;
-  margin-bottom: 0.5rem;
-  /* Add space between radio options */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically center the radio button and label */
-}
-/* Style the radio button itself (optional, but improves appearance)*/
-.form-check-input {
-  margin-right: 0.5rem; /* Add space between radio and label */
-  appearance: none; /* Remove default styling */
-  width: 1.2em;
-  height: 1.2em;
-  border: 2px solid #ccc;
-  border-radius: 50%; /* Make it circular */
-  outline: none; /* Remove focus outline */
-  transition: background-color 0.2s, border-color 0.2s; /* Smooth transitions */
-}
-/* Style the radio button when checked */
-.form-check-input:checked {
-  background-color: #00b894; /* Green background */
-  border-color: #00b894;   /* Green border */
+  background-color: #2a2a2a; /* Option background */
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
+.option:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+.form-check-input {
+  margin-top: 0; /* Align better */
+  margin-right: 0.8rem;
+  appearance: none;
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  vertical-align: middle; /* Align with text */
+  position: relative; /* For inner circle */
+}
+
+.form-check-input:checked {
+  background-color: #00b894;
+  border-color: #00b894;
+}
+
+/* Add inner circle for checked state */
+.form-check-input:checked::before {
+    content: '';
+    display: block;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: #1e1e1e; /* Match card background */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.form-check-label {
+  color: #ccc;
+  cursor: pointer;
+  flex-grow: 1; /* Allow label to take space */
+   transition: color 0.2s ease;
+}
 
 .form-check-input:checked + .form-check-label {
   color: #00b894;
-  /* Highlight selected option */
-  font-weight: bold;
+  font-weight: 500;
 }
 
+.progress {
+    background-color: #333; /* Darker progress background */
+    border-radius: 5px;
+}
 .progress-bar {
   background-color: #00b894;
 }
 
-/* Correct and incorrect answer color */
+/* Results and Answers */
+#result p {
+    font-size: 1.1rem;
+}
+#result strong {
+    color: #00b894;
+}
 .correct {
   color: #28a745;
-  /* Green color for correct answers */
   font-weight: 700;
 }
-
 .incorrect {
   color: #dc3545;
-  /* Red color for incorrect answers */
   font-weight: 700;
+}
+#result h4 { /* Styling for 'Answers' heading */
+    color: #00b894;
+    margin-top: 1.5rem;
+}
+#result .mb-3 { /* Styling for each answer block */
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid #dc3545; /* Red border for incorrect */
 }
 
 /* Congratulations Animation */
 .congratulations {
-  padding: 2rem;
-  margin-top: 1rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
   background-color: #28a745;
   color: white;
   text-align: center;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.3rem;
   opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9); /* Start slightly smaller */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .congratulations.animate-congratulations {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
-
-/* Consistent button styling */
+/* Button Styles */
 .btn {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; /* Add box-shadow transition */
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 500; /* Slightly lighter weight */
+  transition: all 0.2s ease; /* Smooth all transitions */
+  border: none; /* Remove default border */
+}
+.btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
+.btn:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
-.btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
-  color: #fff;
+.btn-secondary { background-color: #6c757d; color: #fff; }
+.btn-secondary:hover { background-color: #5a6268; }
+.btn-primary { background-color: #0d6efd; color: #fff; } /* Use Bootstrap blue */
+.btn-primary:hover { background-color: #0b5ed7; }
+.btn-success { background-color: #198754; color: #fff; } /* Use Bootstrap green */
+.btn-success:hover { background-color: #157347; }
+.btn-warning { background-color: #ffc107; color: #000; }
+.btn-warning:hover { background-color: #ffca2c; }
+.btn-info { background-color: #0dcaf0; color: #000; }
+.btn-info:hover { background-color: #31d2f2; }
+
+/* Footer Styles */
+footer {
+  background-color: #1e1e1e; /* Match darker cards */
+  border-top: 1px solid #333;
+  padding: 1rem 0;
+  margin-top: auto; /* Push to bottom */
 }
-.btn-secondary:hover {
-  background-color: #5a6268;
-  border-color: #545b62;
-  box-shadow: 0 0 5px rgba(108, 117, 125, 0.5); /* Subtle glow */
+footer p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9rem;
 }
 
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: #fff;
+/* --- Flashcard Styles (flashcards.html) --- */
+
+.app-container {
+    /* Container specific to flashcards if needed */
 }
 
-.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Subtle glow */
+.flashcard-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards */
+    gap: 20px; /* Space between cards */
+    perspective: 1000px; /* For 3D flip effect */
 }
 
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-  color: #fff;
+.flashcard {
+    background-color: transparent; /* No background on the outer container */
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.btn-success:hover {
-  background-color: #218838;
-  border-color: #1e7e34;
-  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Subtle glow */
-}
-.btn-warning {
-  background-color: #ffc107;
-  border-color: #ffc107;
-  color: #212529; /* Dark text for contrast */
-}
-
-.btn-warning:hover {
-  background-color: #e0a800;
-  border-color: #d39e00;
-  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);   /* Subtle glow */
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Match outer */
 }
 
-.btn-info {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-  color: #fff;
+/* Flip effect on click/touch (handled by JS adding 'flipped' class) */
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
 }
-.btn-info:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-  box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);   /* Subtle glow */
+
+/* Hover effect for non-touch devices (Optional, adds slight lift) */
+.flashcard:not(.flipped):hover .flashcard-inner {
+     transform: translateY(-5px) scale(1.02);
+     box-shadow: 0 10px 20px rgba(0, 184, 148, 0.2); /* Glow on hover */
+}
+
+
+/* Positioning front and back faces */
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px; /* Match outer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Front face styling */
+.flashcard-front {
+    background: linear-gradient(135deg, #00b894, #00897b); /* Teal gradient */
+    color: white;
+}
+.flashcard-front p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: white; /* Explicit white */
+}
+
+/* Back face styling */
+.flashcard-back {
+    background-color: #333; /* Dark background for back */
+    color: #e0e0e0;
+    transform: rotateY(180deg); /* Hide back initially */
+}
+.flashcard-back p {
+    margin: 5px 0;
+    color: #e0e0e0; /* Explicit light color */
+}
+
+.explanation {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important; /* Make explanation stand out */
+}
+
+.port-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00b894 !important; /* Highlight port number */
+    margin-top: 10px !important;
+}
+
+.port-details {
+    font-size: 0.85rem;
+    color: #a0a0a0 !important;
+    font-style: italic;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .quiz-card {
+        margin-bottom: 1rem;
+    }
+     .flashcard {
+        width: 160px;
+        height: 200px;
+    }
+    .flashcard-front p { font-size: 1.2rem; }
+    .explanation { font-size: 0.9rem; }
+    .port-number { font-size: 1.1rem; }
+}
+
+@media (max-width: 576px) {
+    .hero { padding: 3rem 1rem; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .quiz-card-inner { padding: 1.5rem; }
+    .question { font-size: 1.1rem; }
+    .btn { padding: 0.5rem 1rem; font-size: 0.9rem; }
+     .flashcard {
+        width: calc(50% - 10px); /* Two cards per row */
+        height: 180px;
+    }
+    .flashcard-front p { font-size: 1rem; }
+    .explanation { font-size: 0.8rem; }
+    .port-number { font-size: 1rem; }
 }
